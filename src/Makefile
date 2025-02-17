@@ -2,7 +2,7 @@
 FILES = $(shell ls)
         
 # all: info faculties courses course_units 
-all: info faculties courses course_units 
+all: info faculties courses course_units course_unit_group
 
 
 faculties: 
@@ -14,7 +14,9 @@ courses:
 course_units:
 	scrapy crawl course_units
 
-
+course_unit_group:
+	scrapy crawl course_unit_group
+	
 info:
 	python ./scrapper/info.py
 

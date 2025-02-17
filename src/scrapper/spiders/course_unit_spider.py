@@ -21,6 +21,7 @@ class CourseUnitSpider(scrapy.Spider):
     login_page_base = 'https://sigarra.up.pt/feup/pt/mob_val_geral.autentica'
     password = None
     course_units_ids = set()
+    ocrr_ids = set()
 
     def open_config(self):
         """
@@ -169,53 +170,57 @@ class CourseUnitSpider(scrapy.Spider):
             semesters = [1, 2]
 
         for semester in semesters:
-                yield CourseUnit(
-                    id=course_unit_id,
-                    name=name,
-                    acronym=acronym,
-                    url=url,
-                    last_updated=datetime.now()
-                )
-                study_cycles_table = response.xpath('//h3[text()="Ciclos de Estudo/Cursos"]/following-sibling::table[1]')
-                
-                if study_cycles_table:
-                    for row in study_cycles_table.xpath('.//tr[@class="d"]'):
-
-                        course_link = row.xpath('.//td[1]/a/@href').get()
-                        
-                        if course_link:
-                            course_id = parse_qs(urlparse(course_link).query)['pv_curso_id'][0]
-                            if str(response.meta['course_id']) == course_id:
-                                course_acronym = row.xpath('.//td[1]/a/text()').get()
-                                ects = row.xpath('.//td[6]/text()').get()
-                                curricular_years = row.xpath('.//td[4]/text()').get()
-                                
-                                if course_acronym and ects:
-                                    if curricular_years:
-                                        for year in curricular_years.split(','):
-                                            yield CourseCourseUnit(
-                                                course_id=response.meta['course_id'],
-                                                course_unit_id=course_unit_id,
-                                                course_unit_year=year.strip(),
-                                                ects=ects
-                                            )
-                    yield scrapy.http.Request(
-                        url="https://sigarra.up.pt/feup/pt/mob_ucurr_geral.outras_ocorrencias?pv_ocorrencia_id={}".format(current_occurence_id),
-                        meta={'course_unit_id': course_unit_id, 'semester': semester, 'year': year},
-                        callback=self.extractOccurrences
+                if course_unit_id not in self.course_units_ids:
+                    self.course_units_ids.add(course_unit_id)
+                    yield CourseUnit(
+                        id=course_unit_id,
+                        name=name,
+                        acronym=acronym,
+                        url=url,
+                        last_updated=datetime.now()
                     )
-                else:
-                    yield None
+                    study_cycles_table = response.xpath('//h3[text()="Ciclos de Estudo/Cursos"]/following-sibling::table[1]')
+                    
+                    if study_cycles_table:
+                        for row in study_cycles_table.xpath('.//tr[@class="d"]'):
+
+                            course_link = row.xpath('.//td[1]/a/@href').get()
+                            
+                            if course_link and 'pv_curso_id' in course_link:
+                                course_id = parse_qs(urlparse(course_link).query)['pv_curso_id'][0]
+                                if str(response.meta['course_id']) == course_id:
+                                    course_acronym = row.xpath('.//td[1]/a/text()').get()
+                                    ects = row.xpath('.//td[6]/text()').get()
+                                    curricular_years = row.xpath('.//td[4]/text()').get()
+                                    
+                                    if course_acronym and ects:
+                                        if curricular_years:
+                                            for year in curricular_years.split(','):
+                                                yield CourseCourseUnit(
+                                                    course_id=response.meta['course_id'],
+                                                    course_unit_id=course_unit_id,
+                                                    course_unit_year=year.strip(),
+                                                    ects=ects
+                                                )
+                        yield scrapy.http.Request(
+                            url="https://sigarra.up.pt/feup/pt/mob_ucurr_geral.outras_ocorrencias?pv_ocorrencia_id={}".format(current_occurence_id),
+                            meta={'course_unit_id': course_unit_id, 'semester': semester, 'year': year},
+                            callback=self.extractOccurrences
+                        )
+                    else:
+                        yield None
                 
     def extractOccurrences(self, response):
         data = json.loads(response.body)
         
         for uc in data:
-            if(uc.get('ano_letivo') > 2021): #Just for now
-                yield CourseUnitOccurrence(
-                    course_unit_id=response.meta['course_unit_id'],
-                    id=uc.get('id'),
-                    year=uc.get('ano_letivo'),
-                    semester=uc.get('periodo_nome'),
-                    last_updated=datetime.now()
-                )
+            if(uc.get('ano_letivo') > 2023): #Just for now
+                if uc.get('id') not in self.ocrr_ids:
+                    self.ocrr_ids.add(uc.get('id'))
+                    yield CourseUnitOccurrence(
+                        course_unit_id=response.meta['course_unit_id'],
+                        id=uc.get('id'),
+                        year=uc.get('ano_letivo'),
+                        semester=uc.get('periodo_nome'),
+                        last_updated=datetime.now()
+                    )
