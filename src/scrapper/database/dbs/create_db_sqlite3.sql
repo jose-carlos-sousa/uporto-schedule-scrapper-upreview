@@ -41,6 +41,7 @@ CREATE TABLE `course` (
 CREATE TABLE `course_unit` (
   `id` INTEGER PRIMARY KEY,
   `name` varchar(200) NOT NULL,
+  `occr` INTEGER NOT NULL,
   `acronym` varchar(16) NOT NULL,
   `url` varchar(2000) NOT NULL,
   `last_updated` datetime NOT NULL
@@ -55,25 +56,12 @@ CREATE TABLE `course_course_unit` (
   `course_id` int(11) NOT NULL,
   `course_unit_id` int(11) NOT NULL,
   `course_unit_year` tinyint(4) NOT NULL,
+  `semester` TEXT NOT NULL,
   `ects` float(4) NOT NULL,
-  PRIMARY KEY (`course_id`, `course_unit_id`, `course_unit_year`),
+  PRIMARY KEY (`course_id`, `course_unit_id`, `course_unit_year`, `semester`),
   FOREIGN KEY (`course_unit_id`) REFERENCES `course_unit`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
   FOREIGN KEY (`course_id`) REFERENCES `course`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
-
-
--- --------------------------------------------------------
---
---Table structure for table `course_unit_instance`
---
-CREATE TABLE `course_unit_instance` (
-  `id` INTEGER PRIMARY KEY ,
-  `course_unit_id` int(11) NOT NULL,
-  `year` tinyint(4) NOT NULL,
-  `semester` TEXT NOT NULL,
-  `last_updated` datetime NOT NULL
-);
-
 
 -- --------------------------------------------------------
 ------------------------------------------------

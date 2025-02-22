@@ -14,7 +14,7 @@ import json
 from scrapper.settings import CONFIG, PASSWORD, USERNAME
 
 from ..database.Database import Database
-from ..items import CourseUnit, CourseUnitInstance, CourseCourseUnit
+from ..items import CourseUnit, CourseCourseUnit
 
 class CourseUnitSpider(scrapy.Spider):
     name = "course_units"
@@ -126,11 +126,10 @@ class CourseUnitSpider(scrapy.Spider):
             semesters = [1, 2]
 
         for semester in semesters:
-                if (course_unit_id in self.course_units_ids): continue
-                self.course_units_ids.add(course_unit_id)
                 yield CourseUnit(
                     id=course_unit_id,
                     name=name,
+                    occr=current_occurence_id,
                     acronym=acronym,
                     url=url,
                     last_updated=datetime.now()
@@ -145,26 +144,27 @@ class CourseUnitSpider(scrapy.Spider):
                         yield CourseCourseUnit(
                                 course_id= parse_qs(urlparse(row[0][1]).query).get('pv_curso_id')[0],
                                 course_unit_id=course_unit_id,
+                                semester=semester,
                                 course_unit_year=row[3][0],
                                 ects=row[5][0]
                                 )
-                yield scrapy.http.Request(
-                        url="https://sigarra.up.pt/feup/pt/mob_ucurr_geral.outras_ocorrencias?pv_ocorrencia_id={}".format(current_occurence_id),
-                        meta={'course_unit_id': course_unit_id, 'semester': semester, 'year': year},
-                        callback=self.extractInstances
-                    )
-
-                       
-                
-    def extractInstances(self, response):
-        data = json.loads(response.body)
         
-        for uc in data:
-            if(uc.get('ano_letivo') > 2022): #Just for now
-                yield CourseUnitInstance(
-                    course_unit_id=response.meta['course_unit_id'],
-                    id=uc.get('id'),
-                    year=uc.get('ano_letivo'),
-                    semester=uc.get('periodo_nome'),
-                    last_updated=datetime.now()
-                )
+        yield scrapy.http.Request(
+            url="https://sigarra.up.pt/feup/pt/mob_ucurr_geral.outras_ocorrencias?pv_ocorrencia_id={}".format(current_occurence_id),
+            meta={'course_unit_id': course_unit_id, 'semester': semester, 'year': year},
+            callback=self.extractInstances
+        )
+
+
+    def extractInstances(self, response):
+            data = json.loads(response.body)
+            maxoccr_id = max([int(uc.get('id')) for uc in data])
+            db = Database()
+            sql = """
+                UPDATE course_unit
+                SET occr = ?
+                WHERE id = ?
+            """
+            db.cursor.execute(sql, (maxoccr_id, response.meta['course_unit_id']))
+            db.connection.commit()
+            db.connection.close()

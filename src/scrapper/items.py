@@ -30,19 +30,14 @@ class CourseUnit(scrapy.Item):
     id = scrapy.Field()
     name = scrapy.Field()
     acronym = scrapy.Field()
+    occr = scrapy.Field()
     last_updated = scrapy.Field()
     url = scrapy.Field()
-
-class CourseUnitInstance(scrapy.Item):
-    id = scrapy.Field()
-    course_unit_id = scrapy.Field()
-    year = scrapy.Field()
-    semester = scrapy.Field()
-    last_updated = scrapy.Field()
 
 class CourseCourseUnit(scrapy.Item):
     course_id = scrapy.Field()
     course_unit_id = scrapy.Field()
+    semester = scrapy.Field()
     course_unit_year = scrapy.Field()
     ects = scrapy.Field()
 
