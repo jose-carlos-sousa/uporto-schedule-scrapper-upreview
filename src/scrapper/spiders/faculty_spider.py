@@ -3,7 +3,7 @@ import scrapy
 
 from ..items import Faculty
 from datetime import datetime
-
+from scrapper.settings import ONLY_FEUP
 
 class FacultySpider(scrapy.Spider):
     name = "faculties"
@@ -14,10 +14,19 @@ class FacultySpider(scrapy.Spider):
 
     def parse(self, response):
         for facHtml in response.css('.component-margin.hot-links a'):
-            yield Faculty(
-                acronym=facHtml.css('::attr(href)').extract_first().split("/")[-2],
-                name=facHtml.css('::text').extract_first(),
-                last_updated=datetime.now()
-            )
+            if ONLY_FEUP == "True":
+                if(facHtml.css('::attr(href)').extract_first().split("/")[-2] == "feup"):
+                    yield Faculty(
+                        acronym=facHtml.css('::attr(href)').extract_first().split("/")[-2],
+                        name=facHtml.css('::text').extract_first(),
+                        last_updated=datetime.now()
+                    )
+            else:
+                yield Faculty(
+                        acronym=facHtml.css('::attr(href)').extract_first().split("/")[-2],
+                        name=facHtml.css('::text').extract_first(),
+                        last_updated=datetime.now()
+                    )
+                
 
         
