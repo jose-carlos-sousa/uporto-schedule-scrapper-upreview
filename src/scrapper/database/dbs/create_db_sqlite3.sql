@@ -42,6 +42,7 @@ CREATE TABLE `course_unit` (
   `name` varchar(200) NOT NULL,
   `acronym` varchar(16) NOT NULL,
   `recent_occr` INTEGER NOT NULL,
+  `stats` TEXT ,
   `last_updated` datetime NOT NULL
 );
 
