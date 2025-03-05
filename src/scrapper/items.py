@@ -32,6 +32,7 @@ class CourseUnit(scrapy.Item):
     acronym = scrapy.Field()
     last_updated = scrapy.Field()
     recent_occr = scrapy.Field()
+    stats = scrapy.Field()
 
 class CourseCourseUnit(scrapy.Item):
     course_id = scrapy.Field()
