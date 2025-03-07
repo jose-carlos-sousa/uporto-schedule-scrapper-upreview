@@ -73,7 +73,6 @@ class CourseUnitGroupSpider(scrapy.Spider):
                         if not year:
                             self.logger.warning(f"No year found for row: {row}")
                             year = "Unknown" 
-                        print(year)
                         try:
                             course_unit_id = link.split("pv_ocorrencia_id=")[1].split("&")[0]
                             course_unit_url = f'https://sigarra.up.pt/feup/pt/ucurr_geral.ficha_uc_view?pv_ocorrencia_id={course_unit_id}'
@@ -103,8 +102,6 @@ class CourseUnitGroupSpider(scrapy.Spider):
             return
         Instance = response.css('#conteudoinner > h2::text').extract_first()
         semester = Instance[24:26].strip()
-        
-        print(f"Course unit ID: {course_unit_id} - Year: {response.meta['year']} - Semester: {semester} - Course ID: {response.meta['course_id']} - Group ID: {response.meta['div_id']}")
         
         yield CourseUnitGroup(
               id = response.meta['div_id'],
