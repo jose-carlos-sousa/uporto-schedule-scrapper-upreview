@@ -9,7 +9,7 @@
 
 CREATE TABLE faculty (
   acronym VARCHAR(10) PRIMARY KEY,
-  name TEXT,
+  name VARCHAR(10),
   last_updated TIMESTAMP NOT NULL
 );
 
@@ -43,6 +43,7 @@ CREATE TABLE course_unit (
   name VARCHAR(200) NOT NULL,
   acronym VARCHAR(16) NOT NULL,
   recent_occr INT NOT NULL,
+  stats VARCHAR(300),
   last_updated TIMESTAMP NOT NULL
 );
 
@@ -57,15 +58,20 @@ CREATE TABLE course_course_unit (
   year SMALLINT NOT NULL,
   semester VARCHAR(10) NOT NULL,
   ects FLOAT(4) NOT NULL,
+  group_id INT, 
   PRIMARY KEY (course_id, course_unit_id, year, semester),
   FOREIGN KEY (course_unit_id) REFERENCES course_unit(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (group_id) REFERENCES course_unit_group(id) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (course_id) REFERENCES course(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE INDEX course_course_unit_course_unit_id_idx ON course_course_unit (course_unit_id);
 CREATE INDEX course_course_unit_course_id_idx ON course_course_unit (course_id);
 
-
+CREATE TABLE course_unit_group (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(600) NOT NULL
+);
 
 CREATE TABLE professor (
   id SERIAL PRIMARY KEY,

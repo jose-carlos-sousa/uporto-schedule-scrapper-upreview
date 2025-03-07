@@ -149,3 +149,14 @@ class ProfessorPipeline(MySQLPipeline):
         if isinstance(item, items.Professor):
             super().process_item(item, spider)
         return item
+class CourseUnitGroupPipeline(MySQLPipeline):
+    def __init__(self):
+        MySQLPipeline.__init__(self)
+        self.expected_num = int(
+            self.config['statistics']['num_course_unit_group'])
+        self.table_name = 'course_unit_group'
+
+    def process_item(self, item, spider):
+        if isinstance(item, items.CourseUnitGroup):
+            super().process_item(item, spider)
+        return item
