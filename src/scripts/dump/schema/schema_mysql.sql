@@ -43,6 +43,7 @@ CREATE TABLE course_unit (
   name VARCHAR(200) NOT NULL,
   acronym VARCHAR(16) NOT NULL,
   recent_occr INT NOT NULL,
+  stats VARCHAR(300),
   last_updated TIMESTAMP NOT NULL
 );
 

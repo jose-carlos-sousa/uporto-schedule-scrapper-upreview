@@ -57,6 +57,7 @@ CREATE TABLE `course_course_unit` (
   `year` tinyint(4) NOT NULL,
   `semester`  NOT NULL,
   `ects` float(4) NOT NULL,
+  `group_id` int(11),
   PRIMARY KEY (`course_id`, `course_unit_id`, `year`, `semester`),
   FOREIGN KEY (`course_unit_id`) REFERENCES `course_unit`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
   FOREIGN KEY (`course_id`) REFERENCES `course`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -85,6 +86,17 @@ CREATE TABLE `course_unit_professor` (
   FOREIGN KEY (`course_unit_id`) REFERENCES `course_unit`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`professor_id`) REFERENCES `professor`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+-- --------------------------------------------------------
+--
+-- Table structure for table `course_unit_group`
+--
+
+CREATE TABLE `course_unit_group` (
+  `id` INTEGER PRIMARY KEY,
+  `name` varchar(200) NOT NULL
+);
+
 
 -- --------------------------------------------------------
 ------------------------------------------------

@@ -240,14 +240,11 @@ class CourseUnitSpider(scrapy.Spider):
                             formdata={'pv_ocorrencia_id': str(max_occr_id), 'PV_ANO_LETIVO': str(uc.get('ano_letivo')), 'PV_SHOW_TITLE': 'S'},
                             meta={'course_unit_id': response.meta['course_unit_id'], 'PV_ANO_LETIVO': uc.get('ano_letivo')},
                             callback=self.extractResults,
-                            errback=self.handle_error
                     )
-    def handle_error(self, failure):
-                    self.log(f"Failed to fetch course unit stats: {failure}", level=logging.ERROR)
-                    self.log(f"Response body: {failure.value.response.body}", level=logging.ERROR)
+
 
     def extractResults(self, response):
-        print("Extracting results", response.meta['PV_ANO_LETIVO'])
+
         rows = response.css('table.dados > tbody > tr.d')
         results = []
         total_num_students = 0
@@ -264,7 +261,7 @@ class CourseUnitSpider(scrapy.Spider):
         
         year = response.meta['PV_ANO_LETIVO']
         results_str = f"{year}_" + "_".join(results)
-        print(results_str)
+
         
         db = Database()
         sql = """
