@@ -59,8 +59,9 @@ CREATE TABLE `course_course_unit` (
   `ects` float(4) NOT NULL,
   `group_id` int(11),
   PRIMARY KEY (`course_id`, `course_unit_id`, `year`, `semester`),
-  FOREIGN KEY (`course_unit_id`) REFERENCES `course_unit`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
-  FOREIGN KEY (`course_id`) REFERENCES `course`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`course_unit_id`) REFERENCES `course_unit`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`course_id`) REFERENCES `course`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`group_id`) REFERENCES `course_unit_group`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
