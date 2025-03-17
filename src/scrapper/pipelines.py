@@ -160,3 +160,26 @@ class CourseUnitGroupPipeline(MySQLPipeline):
         if isinstance(item, items.CourseUnitGroup):
             super().process_item(item, spider)
         return item
+    
+class ExchangeFacultyPipeline(MySQLPipeline):
+    def __init__(self):
+        MySQLPipeline.__init__(self)
+        self.expected_num = int(
+            self.config['statistics']['num_exchange_faculties'])
+        self.table_name = 'exchange_faculty'
+
+    def process_item(self, item, spider):
+        if isinstance(item, items.ExchangeFaculty):
+            super().process_item(item, spider)
+        return item
+    
+class ExchangeFacultyCoursePipeline(MySQLPipeline):
+    def __init__(self):
+        MySQLPipeline.__init__(self)
+        self.expected_num = int(
+            self.config['statistics']['num_exchange_faculty_courses'])
+        self.table_name = 'exchange_faculty_course'
+    def process_item(self, item, spider):
+        if isinstance(item, items.ExchangeFacultyCourse):
+            super().process_item(item, spider)
+        return item

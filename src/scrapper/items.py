@@ -54,3 +54,15 @@ class CourseUnitGroup(scrapy.Item):
     id = scrapy.Field()
     name = scrapy.Field()
     
+class ExchangeFaculty(scrapy.Item):
+    id = scrapy.Field()
+    country = scrapy.Field()
+    name = scrapy.Field()
+    modality = scrapy.Field()
+    last_updated = scrapy.Field()
+
+
+class ExchangeFacultyCourse(scrapy.Item):
+    exchange_faculty_id = scrapy.Field()
+    course_id = scrapy.Field()
+    faculty_id = scrapy.Field()
