@@ -99,6 +99,37 @@ CREATE TABLE `course_unit_group` (
 );
 
 
+-----------------------------------------------
+-- Table structure for table `exchange_faculty`
+--
+
+CREATE TABLE `exchange_faculty` (
+  `id` varchar(100) PRIMARY KEY,
+  `country` varchar(100) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `modality` varchar(50) NOT NULL,
+   `thumbnail` varchar(2000),
+  `address` varchar(2000),
+  `website` varchar(2000) ,
+  `latitude` float(10,6) ,
+  `longitude` float(10,6) ,
+  `last_updated` datetime NOT NULL
+);
+
+-- --------------------------------------------------------
+--
+-- Table structure for table `exchange_faculty_course`
+--
+
+CREATE TABLE `exchange_faculty_course` (
+  `exchange_faculty_id` varchar(100)  NOT NULL,
+  `course_id` int(11) NOT NULL,
+  PRIMARY KEY (`exchange_faculty_id`, `course_id`),
+  FOREIGN KEY (`exchange_faculty_id`) REFERENCES `exchange_faculty`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`course_id`) REFERENCES `course`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
 -- --------------------------------------------------------
 ------------------------------------------------
 --

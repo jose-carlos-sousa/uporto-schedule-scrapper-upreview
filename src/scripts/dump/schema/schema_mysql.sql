@@ -94,6 +94,36 @@ CREATE TABLE course_unit_professor (
 
 
 -- --------------------------------------------------------
+--
+-- Table structure for table `exchange_faculty`
+CREATE TABLE exchange_faculty (
+  id VARCHAR(100) PRIMARY KEY,
+  country VARCHAR(100) NOT NULL,
+  name VARCHAR(200) NOT NULL,
+  modality VARCHAR(50) NOT NULL,
+  thumbnail VARCHAR(2000),
+  address VARCHAR(2000),
+  website VARCHAR(2000),
+  latitude FLOAT(10,6),
+  longitude FLOAT(10,6),
+  last_updated DATETIME NOT NULL
+);
+
+-- --------------------------------------------------------
+--
+-- Table structure for table `exchange_faculty_course`
+--
+
+CREATE TABLE exchange_faculty_course (
+  exchange_faculty_id VARCHAR(100) NOT NULL,
+  course_id INT NOT NULL,
+  PRIMARY KEY (exchange_faculty_id, course_id),
+  FOREIGN KEY (exchange_faculty_id) REFERENCES exchange_faculty(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (course_id) REFERENCES course(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+-----------------------------------------------
 ------------------------------------------------
 --
 -- Table structure for table `info`

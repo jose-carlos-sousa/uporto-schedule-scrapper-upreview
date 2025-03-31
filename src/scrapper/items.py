@@ -60,6 +60,11 @@ class ExchangeFaculty(scrapy.Item):
     name = scrapy.Field()
     modality = scrapy.Field()
     last_updated = scrapy.Field()
+    thumbnail = scrapy.Field()
+    address = scrapy.Field()
+    website = scrapy.Field()
+    latitude = scrapy.Field()
+    longitude = scrapy.Field()
 
 
 class ExchangeFacultyCourse(scrapy.Item):

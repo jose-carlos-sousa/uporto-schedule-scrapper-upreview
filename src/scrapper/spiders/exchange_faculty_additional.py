@@ -8,21 +8,24 @@ import urllib.parse
 from configparser import ConfigParser, ExtendedInterpolation
 import json
 from datetime import time
+import os
 
 from scrapper.settings import CONFIG, PASSWORD, USERNAME
 
 from ..database.Database import Database
 from ..items import  ExchangeFaculty, ExchangeFacultyCourse
+import pandas as pd
 
-class ExchangeFacultySpider(scrapy.Spider):
-    name = "exchange_faculties"
+class ExchangeFacultyAditional(scrapy.Spider):
+    name = "exchange_faculty_additional"
+
     allowed_domains = ['sigarra.up.pt']
     login_page_base = 'https://sigarra.up.pt/feup/pt/mob_val_geral.autentica'
     days = {'Segunda-feira': 0, 'Terça-feira': 1, 'Quarta-feira': 2,
             'Quinta-feira': 3, 'Sexta-feira': 4, 'Sábado': 5}
 
     def __init__(self, password=None, category=None, *args, **kwargs):
-        super(ExchangeFacultySpider, self).__init__(*args, **kwargs)
+        super(ExchangeFacultyAditional, self).__init__(*args, **kwargs)
         self.open_config()
         self.user = USERNAME
         self.password = PASSWORD
@@ -67,13 +70,7 @@ class ExchangeFacultySpider(scrapy.Spider):
                 """
                 db = Database()
                 db.cursor.execute(sql)
-                faculties = db.cursor.fetchall()
                 db.connection.close()
-                print(faculties)
-                for faculty in faculties:
-                    url = f"https://sigarra.up.pt/{faculty[0]}/pt/coop_candidatura_geral.ver_vagas"
-                    print(url)
-                    yield scrapy.Request(url= url, callback=self.parseExchangeFaculties, meta={'faculty_acronym': faculty[0]})
                 self.getMapInfo()
             else:
                 message = 'Login failed. SIGARRA\'s response: error type "{}";\nerror message "{}"'.format(
@@ -98,45 +95,66 @@ class ExchangeFacultySpider(scrapy.Spider):
         db = Database()
         db.cursor.execute(sql)
         faculties = db.cursor.fetchall()
-        db.connection.close()
-        print(faculties)
-        # write to example-queries.txt file
-        with open('./google-maps-scrapper/example-queries.txt', 'w') as f:
+
+
+        os.chdir("scrapper/google-maps-scraper")
+        file_path = "example-queries.txt"
+        binary_path = "google-maps-scraper"
+
+        # Install Playwright dependencies,
+        os.system("npx playwright install-deps")
+
+        # Install system dependencies
+        os.system("apt-get update && apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libasound2 libatspi2.0-0")
+        
+        with open(file_path, 'w') as f:
             for faculty in faculties:
                 f.write(f"{faculty[0]}\n")
-    def parseExchangeFaculties(self, response):
-        print("Parsing exchange faculties")
-        for table in response.xpath('//div[@id="conteudoinner"]/table[@class="dados"]'):
-            course_name = table.xpath('preceding-sibling::h2[1]/text()').get()
-         
-            db = Database() 
-            sql = """
-                SELECT course.id
-                FROM course 
-                WHERE course.name = '{}'
-            """.format(course_name)
-            db.cursor.execute(sql)
-            course_id = db.cursor.fetchone()[0]
-  
-            db.connection.close()
-            for row in table.xpath('.//tr[@class="d"]'):
-                
-                faculty = ExchangeFaculty(
-                    country=re.sub(r'[^a-zA-ZÀ-ú\s]', '', row.xpath('td[1]/text()').get().strip()),
-                    id=row.xpath('td[2]/text()').get().strip(),
-                    name=row.xpath('td[3]/text()').get().strip(),
-                    modality=row.xpath('td[9]/text()').get().strip(),
-                    last_updated=datetime.now()
-                    
-                )
-                yield faculty
+        command = f"./{binary_path} -input {file_path} -results unis.csv -exit-on-inactivity 3m"
+        os.system(command)
+        #after the command is executed check if the file unis.csv exists
+        if os.path.exists("unis.csv"):
+            print("File unis.csv exists")
 
-                course = ExchangeFacultyCourse(
-                    exchange_faculty_id=row.xpath('td[2]/text()').get().strip(),
-                    course_id=course_id
-                )
-        
-                yield course
-        
+            # Read the CSV file into a pandas DataFrame
+            df = pd.read_csv("unis.csv")
+
+            # Assuming the CSV has a column 'input_id' and 'review_num'
+            # Keep only the row with the highest 'review_num' for each 'input_id'
+            df = df.loc[df.groupby('input_id')['review_count'].idxmax()]
+
+            # Iterate through the filtered DataFrame and update the database
+            index =0
+            for _, row in df.iterrows():
+
+                sql = """
+                    UPDATE exchange_faculty
+                    SET latitude = ?, longitude = ?, address = ?, thumbnail = ?, website = ?
+                    WHERE name = ?
+                """
+                # Assuming the DataFrame columns are in the order: name, latitude, longitude, address, thumbnail, website
+                
+
+                print(f"latitude: {row['latitude']}")
+                print(f"longitude: {row['longitude']}")
+                print(f"address: {row['address']}") 
+                print(f"thumbnail: {row['thumbnail']}")
+                print(f"website: {row['website']}")
+                print(f"faculties[index]: {faculties[index]}")
+                # Insert the data into the database
+                db.cursor.execute(sql, (
+                    row['latitude'],  # latitude
+                    row['longitude'],  # longitude
+                    row['address'],   # address
+                    row['thumbnail'],  # thumbnail
+                    row['website'],   # website
+                    faculties[index][0]      # name
+                ))
+                index += 1
+                
+            else:
+                print("File unis.csv does not exist")
+
+            
             
     
