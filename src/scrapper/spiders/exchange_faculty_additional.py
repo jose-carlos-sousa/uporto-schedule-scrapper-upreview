@@ -101,10 +101,8 @@ class ExchangeFacultyAditional(scrapy.Spider):
         file_path = "example-queries.txt"
         binary_path = "google-maps-scraper"
 
-        # Install Playwright dependencies,
         os.system("npx playwright install-deps")
 
-        # Install system dependencies
         os.system("apt-get update && apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libxkbcommon0 libasound2 libatspi2.0-0")
         
         with open(file_path, 'w') as f:
@@ -112,18 +110,14 @@ class ExchangeFacultyAditional(scrapy.Spider):
                 f.write(f"{faculty[0]}\n")
         command = f"./{binary_path} -input {file_path} -results unis.csv -exit-on-inactivity 3m"
         os.system(command)
-        #after the command is executed check if the file unis.csv exists
+
         if os.path.exists("unis.csv"):
             print("File unis.csv exists")
 
-            # Read the CSV file into a pandas DataFrame
             df = pd.read_csv("unis.csv")
 
-            # Assuming the CSV has a column 'input_id' and 'review_num'
-            # Keep only the row with the highest 'review_num' for each 'input_id'
             df = df.loc[df.groupby('input_id')['review_count'].idxmax()]
 
-            # Iterate through the filtered DataFrame and update the database
             index =0
             for _, row in df.iterrows():
 
@@ -132,8 +126,7 @@ class ExchangeFacultyAditional(scrapy.Spider):
                     SET latitude = ?, longitude = ?, address = ?, thumbnail = ?, website = ?
                     WHERE name = ?
                 """
-                # Assuming the DataFrame columns are in the order: name, latitude, longitude, address, thumbnail, website
-                
+            
 
                 print(f"latitude: {row['latitude']}")
                 print(f"longitude: {row['longitude']}")
@@ -141,7 +134,7 @@ class ExchangeFacultyAditional(scrapy.Spider):
                 print(f"thumbnail: {row['thumbnail']}")
                 print(f"website: {row['website']}")
                 print(f"faculties[index]: {faculties[index]}")
-                # Insert the data into the database
+
                 db.cursor.execute(sql, (
                     row['latitude'],  # latitude
                     row['longitude'],  # longitude
