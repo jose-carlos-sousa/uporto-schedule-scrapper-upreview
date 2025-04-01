@@ -9,7 +9,7 @@
 
 CREATE TABLE faculty (
   acronym VARCHAR(10) PRIMARY KEY,
-  name VARCHAR(10),
+  name TEXT,
   last_updated TIMESTAMP NOT NULL
 );
 
@@ -47,6 +47,11 @@ CREATE TABLE course_unit (
   last_updated TIMESTAMP NOT NULL
 );
 
+CREATE TABLE course_unit_group (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL
+);
+
 
 -- --------------------------------------------------------
 --
@@ -68,10 +73,6 @@ CREATE TABLE course_course_unit (
 CREATE INDEX course_course_unit_course_unit_id_idx ON course_course_unit (course_unit_id);
 CREATE INDEX course_course_unit_course_id_idx ON course_course_unit (course_id);
 
-CREATE TABLE course_unit_group (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(600) NOT NULL
-);
 
 CREATE TABLE professor (
   id SERIAL PRIMARY KEY,
@@ -94,36 +95,6 @@ CREATE TABLE course_unit_professor (
 
 
 -- --------------------------------------------------------
---
--- Table structure for table `exchange_faculty`
-CREATE TABLE exchange_faculty (
-  id VARCHAR(100) PRIMARY KEY,
-  country VARCHAR(100) NOT NULL,
-  name VARCHAR(200) NOT NULL,
-  modality VARCHAR(50) NOT NULL,
-  thumbnail VARCHAR(2000),
-  address VARCHAR(2000),
-  website VARCHAR(2000),
-  latitude FLOAT(10,6),
-  longitude FLOAT(10,6),
-  last_updated DATETIME NOT NULL
-);
-
--- --------------------------------------------------------
---
--- Table structure for table `exchange_faculty_course`
---
-
-CREATE TABLE exchange_faculty_course (
-  exchange_faculty_id VARCHAR(100) NOT NULL,
-  course_id INT NOT NULL,
-  PRIMARY KEY (exchange_faculty_id, course_id),
-  FOREIGN KEY (exchange_faculty_id) REFERENCES exchange_faculty(id) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (course_id) REFERENCES course(id) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-
------------------------------------------------
 ------------------------------------------------
 --
 -- Table structure for table `info`
@@ -131,4 +102,48 @@ CREATE TABLE exchange_faculty_course (
 
 CREATE TABLE info (
   date TIMESTAMP PRIMARY KEY
+);
+
+CREATE TABLE review (
+  id SERIAL PRIMARY KEY,
+  review TEXT NOT NULL,
+  general TEXT,
+  evaluation TEXT,
+  evaluationrating INT,
+  work TEXT,
+  workrating INT,
+  content TEXT,
+  contentrating INT,
+  difficulty TEXT,
+  difficultyrating INT,
+  teachers TEXT,
+  teachersrating INT,
+  relevance TEXT,
+  relevancerating INT,
+  course_unit_id INT NOT NULL,
+  username VARCHAR(100),
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL,
+  FOREIGN KEY (course_unit_id) REFERENCES course_unit(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE exchange_faculty (
+  id VARCHAR(200) PRIMARY KEY,
+  country VARCHAR(100) NOT NULL,
+  name VARCHAR(200) NOT NULL,
+  modality VARCHAR(50) NOT NULL,
+  thumbnail VARCHAR(2000),
+  address VARCHAR(2000),
+  website VARCHAR(2000),
+  latitude DOUBLE PRECISION,
+  longitude DOUBLE PRECISION,
+  last_updated TIMESTAMP NOT NULL
+);
+
+CREATE TABLE exchange_faculty_course (
+  exchange_faculty_id VARCHAR(100) NOT NULL,
+  course_id INT NOT NULL,
+  PRIMARY KEY (exchange_faculty_id, course_id),
+  FOREIGN KEY (exchange_faculty_id) REFERENCES exchange_faculty(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (course_id) REFERENCES course(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
