@@ -15,6 +15,8 @@ from scrapper.settings import CONFIG, PASSWORD, USERNAME
 from ..database.Database import Database
 from ..items import  ExchangeFaculty, ExchangeFacultyCourse
 import pandas as pd
+import requests
+from pathlib import Path
 
 class ExchangeFacultyAditional(scrapy.Spider):
     name = "exchange_faculty_additional"
@@ -90,7 +92,7 @@ class ExchangeFacultyAditional(scrapy.Spider):
         Get the map information from the response.
         """
         sql = """
-            select name from exchange_faculty
+            select name from exchange_faculty 
         """
         db = Database()
         db.cursor.execute(sql)
@@ -107,7 +109,8 @@ class ExchangeFacultyAditional(scrapy.Spider):
         
         with open(file_path, 'w') as f:
             for faculty in faculties:
-                f.write(f"{faculty[0]}\n")
+                print(f"faculty: {faculty}")
+                f.write(f"{faculty[0]} #!#{faculty[0]} \n")
         command = f"./{binary_path} -input {file_path} -results unis.csv -exit-on-inactivity 3m"
         os.system(command)
 
@@ -117,8 +120,7 @@ class ExchangeFacultyAditional(scrapy.Spider):
             df = pd.read_csv("unis.csv")
 
             df = df.loc[df.groupby('input_id')['review_count'].idxmax()]
-
-            index =0
+            
             for _, row in df.iterrows():
 
                 sql = """
@@ -133,7 +135,31 @@ class ExchangeFacultyAditional(scrapy.Spider):
                 print(f"address: {row['address']}") 
                 print(f"thumbnail: {row['thumbnail']}")
                 print(f"website: {row['website']}")
-                print(f"faculties[index]: {faculties[index]}")
+                print(f"index: {row['input_id']}")
+                # Create images directory if it doesn't exist
+                image_dir = "../../images/exchange_faculties"
+                os.makedirs(image_dir, exist_ok=True)
+
+                # Download the thumbnail image if available
+                if row['thumbnail'] and row['thumbnail'] != "" and pd.notna(row['thumbnail']):
+                    try:
+                        print(f"Downloading image from {row['thumbnail']}")
+                        
+                        image_url = row['thumbnail']
+                        image_name = f"{row['input_id'].replace(' ', '_')}.jpg"
+                        image_path = os.path.join(image_dir, image_name)
+                        
+                        # Download the image
+                        response = requests.get(image_url, stream=True)
+                        if response.status_code == 200:
+                            with open(image_path, 'wb') as f:
+                                for chunk in response.iter_content(1024):
+                                    f.write(chunk)
+                            print(f"Image downloaded to {image_path}")
+                        else:
+                            print(f"Failed to download image, status code: {response.status_code}")
+                    except Exception as e:
+                        print(f"Error downloading image: {e}")
 
                 db.cursor.execute(sql, (
                     row['latitude'],  # latitude
@@ -141,9 +167,9 @@ class ExchangeFacultyAditional(scrapy.Spider):
                     row['address'],   # address
                     row['thumbnail'],  # thumbnail
                     row['website'],   # website
-                    faculties[index][0]      # name
+                    row["input_id"]     # name
                 ))
-                index += 1
+
                 
             else:
                 print("File unis.csv does not exist")
