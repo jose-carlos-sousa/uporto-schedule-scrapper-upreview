@@ -1,20 +1,20 @@
-import getpass
+
 import scrapy
-
-import sqlite3
-
-from scrapy.http import Request, FormRequest
+# import sqlite3
+import getpass
+from scrapy.http import FormRequest, Request
 from urllib.parse import urlparse, parse_qs, urlencode
 from configparser import ConfigParser, ExtendedInterpolation
+from scrapper.settings import PASSWORD, USERNAME
 from datetime import datetime
 import pandas as pd
 import logging
 import json
 
-from scrapper.settings import CONFIG
+# from scrapper.settings import CONFIG
 
 from ..database.Database import Database
-from ..items import CourseUnit, CourseCourseUnit, CourseUnitProfessor, Professor
+from ..items import CourseUnit, CourseCourseUnit
 import hashlib
 
 class CourseUnitSpider(scrapy.Spider):
@@ -23,10 +23,51 @@ class CourseUnitSpider(scrapy.Spider):
     course_courses_units_hashes = set()
     prof_ids = set()
     course_unit_professors = set()
+    login_page_base = 'https://sigarra.up.pt/feup/pt/mob_val_geral.autentica'
+    
+    def open_config(self):
+        """
+        Reads and saves the configuration file. 
+        """
+        config_file = "./config.ini"
+        self.config = ConfigParser(interpolation=ExtendedInterpolation())
+        self.config.read(config_file) 
+
+    def __init__(self, *args, **kwargs):
+        super(CourseUnitSpider, self).__init__(*args, **kwargs)
+        self.open_config()
+        self.user = USERNAME
+        self.password = PASSWORD
+        logging.getLogger('scrapy').propagate = False
+
+    def format_login_url(self):
+        return '{}?{}'.format(self.login_page_base, urlencode({
+            'pv_login': self.user,
+            'pv_password': self.password
+        }))
 
     def start_requests(self):
         "This function is called before crawling starts."
-        return self.courseRequests()
+        if self.password is None:
+            self.password = getpass.getpass(prompt='Password: ', stream=None)
+            
+        yield Request(url=self.format_login_url(), callback=self.check_login_response, errback=self.login_response_err)
+
+    def login_response_err(self, failure):
+        print('Login failed. SIGARRA\'s response: error type 404;\nerror message "{}"'.format(failure))
+        print("Check your password")
+    
+    def check_login_response(self, response):
+        """Check the response returned by a login request to see if we are
+        successfully logged in. Since we used the mobile login API endpoint,
+        we can just check the status code.
+        """ 
+
+        if response.status == 200:
+            response_body = json.loads(response.body)
+            if response_body['authenticated']:
+                self.log("Successfully logged in. Let's start crawling!")
+                return self.courseRequests()
 
     def courseRequests(self):
         print("Gathering course units") 
@@ -96,7 +137,7 @@ class CourseUnitSpider(scrapy.Spider):
         if acronym is not None:
             acronym = acronym.replace(".", "_")
 
-        url = response.url
+        # url = response.url
         # # If there is no schedule for this course unit
         # if schedule_url is not None:
         #     schedule_url = response.urljoin(schedule_url)
@@ -141,7 +182,7 @@ class CourseUnitSpider(scrapy.Spider):
                             course_unit_id=course_unit_id,
                             year=row[3][0],
                             semester=semester,
-                            ects=row[5][0]
+                            ects=row[5][0],
                             )
                     hash_ccu = hashlib.md5((cu['course_id']+cu['course_unit_id']+cu['year']+ cu['semester']).encode()).hexdigest()
                     if(hash_ccu not in self.course_courses_units_hashes):
@@ -190,5 +231,44 @@ class CourseUnitSpider(scrapy.Spider):
             WHERE id = ?
         """
         db.cursor.execute(sql, (max_occr_id, response.meta['course_unit_id']))
+        db.connection.commit()
+        db.connection.close()
+        
+        for uc in data:
+            yield scrapy.http.FormRequest(
+                            url="https://sigarra.up.pt/flup/pt/EST_AJAX.DIST_RESULT_OCORR_DETAIL_TBL",
+                            formdata={'pv_ocorrencia_id': str(max_occr_id), 'PV_ANO_LETIVO': str(uc.get('ano_letivo')), 'PV_SHOW_TITLE': 'S'},
+                            meta={'course_unit_id': response.meta['course_unit_id'], 'PV_ANO_LETIVO': uc.get('ano_letivo')},
+                            callback=self.extractResults,
+                    )
+
+
+    def extractResults(self, response):
+
+        rows = response.css('table.dados > tbody > tr.d')
+        results = []
+        total_num_students = 0
+        for row in rows:
+            result_type = row.css('td:nth-child(1)::text').get()
+            num_students = row.css('td:nth-child(3)::text').get()
+            if result_type and num_students:
+                num_students = int(num_students)
+                total_num_students += num_students
+                results.append(f"{result_type}-{num_students}")
+        
+        if total_num_students == 0:
+            return
+        
+        year = response.meta['PV_ANO_LETIVO']
+        results_str = f"{year}_" + "_".join(results)
+
+        
+        db = Database()
+        sql = """
+            UPDATE course_unit
+            SET stats = ?
+            WHERE id = ? AND (stats IS NULL OR stats = '' OR CAST(SUBSTR(stats, 1, 4) AS INTEGER) < ?)
+        """
+        db.cursor.execute(sql, (results_str, response.meta['course_unit_id'], response.meta['PV_ANO_LETIVO']))
         db.connection.commit()
         db.connection.close()

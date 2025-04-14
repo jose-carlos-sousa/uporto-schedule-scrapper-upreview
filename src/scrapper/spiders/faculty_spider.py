@@ -13,6 +13,7 @@ class FacultySpider(scrapy.Spider):
     ]
 
     def parse(self, response):
+        
         for facHtml in response.css('.component-margin.hot-links a'):
             if ONLY_FEUP == "True":
                 if(facHtml.css('::attr(href)').extract_first().split("/")[-2] == "feup"):

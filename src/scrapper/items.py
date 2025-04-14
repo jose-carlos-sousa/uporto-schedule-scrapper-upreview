@@ -32,10 +32,12 @@ class CourseUnit(scrapy.Item):
     acronym = scrapy.Field()
     last_updated = scrapy.Field()
     recent_occr = scrapy.Field()
+    stats = scrapy.Field()
 
 class CourseCourseUnit(scrapy.Item):
     course_id = scrapy.Field()
     course_unit_id = scrapy.Field()
+    group_id = scrapy.Field()
     year = scrapy.Field()
     semester = scrapy.Field()
     ects = scrapy.Field()
@@ -47,3 +49,25 @@ class CourseUnitProfessor(scrapy.Item):
 class Professor(scrapy.Item):
     id = scrapy.Field()
     name = scrapy.Field()
+    
+class CourseUnitGroup(scrapy.Item):
+    id = scrapy.Field()
+    name = scrapy.Field()
+    
+class ExchangeFaculty(scrapy.Item):
+    id = scrapy.Field()
+    country = scrapy.Field()
+    name = scrapy.Field()
+    modality = scrapy.Field()
+    last_updated = scrapy.Field()
+    thumbnail = scrapy.Field()
+    address = scrapy.Field()
+    website = scrapy.Field()
+    latitude = scrapy.Field()
+    longitude = scrapy.Field()
+
+
+class ExchangeFacultyCourse(scrapy.Item):
+    exchange_faculty_id = scrapy.Field()
+    course_id = scrapy.Field()
+    faculty_id = scrapy.Field()
