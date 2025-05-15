@@ -9,7 +9,8 @@ from configparser import ConfigParser, ExtendedInterpolation
 import json
 from datetime import time
 import os
-
+from geopy.geocoders import Nominatim
+from tqdm import tqdm
 from scrapper.settings import CONFIG, PASSWORD, USERNAME
 
 from ..database.Database import Database
@@ -118,8 +119,28 @@ class ExchangeFacultyAditional(scrapy.Spider):
             print("File unis.csv exists")
 
             df = pd.read_csv("unis.csv")
+            geolocator = Nominatim(user_agent="geoapi")
+            db.cursor.execute("SELECT name, country FROM exchange_faculty")
+            faculty_country_map = {name: country for name, country in db.cursor.fetchall()}
+            valid_rows = []
 
-            df = df.loc[df.groupby('input_id')['review_count'].idxmax()]
+            for _, row in tqdm(df.iterrows(), total=len(df)):
+                try:
+                    location = geolocator.reverse(f"{row['latitude']}, {row['longitude']}", language="pt")
+                    geo_country = location.raw['address'].get('country', '')
+                    db_country = faculty_country_map.get(row['input_id'], '')
+
+                    db_words = {w[:2].lower() for w in db_country.split() if len(w) >= 2}
+                    geo_words = {w[:2].lower() for w in geo_country.split() if len(w) >= 2}
+
+                    if db_words & geo_words:
+                        valid_rows.append(row)
+                except Exception as e:
+                    print(f"Error geocoding {row['input_id']}: {e}")
+
+            df_valid = pd.DataFrame(valid_rows)
+
+            df = df_valid.loc[df_valid.groupby('input_id')['review_count'].idxmax()].reset_index(drop=True)
             
             for _, row in df.iterrows():
 

@@ -22,6 +22,7 @@ class Course(scrapy.Item):
     course_type = scrapy.Field()
     url = scrapy.Field()
     year = scrapy.Field()
+    stats_json = scrapy.Field()
     plan_url = scrapy.Field()
     last_updated = scrapy.Field()
 
