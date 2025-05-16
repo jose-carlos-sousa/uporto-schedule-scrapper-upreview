@@ -47,10 +47,24 @@ CREATE TABLE course_unit (
   last_updated TIMESTAMP NOT NULL
 );
 
+
+CREATE TABLE course_path (
+  id SERIAL PRIMARY KEY,
+  code INT NOT NULL,
+  name TEXT NOT NULL,
+  course_id INT NOT NULL,
+  UNIQUE (code, course_id),
+  FOREIGN KEY (course_id) REFERENCES course(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 CREATE TABLE course_unit_group (
   id SERIAL PRIMARY KEY,
-  name TEXT NOT NULL
+  name TEXT NOT NULL,
+  path_id INT,
+  FOREIGN KEY (path_id) REFERENCES course_path(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+
 
 
 -- --------------------------------------------------------
@@ -58,20 +72,38 @@ CREATE TABLE course_unit_group (
 -- Table structure for table `course_metadata`
 --
 CREATE TABLE course_course_unit (
+  id SERIAL PRIMARY KEY, 
   course_id INT NOT NULL,
   course_unit_id INT NOT NULL,
   year SMALLINT NOT NULL,
   semester VARCHAR(10) NOT NULL,
   ects FLOAT(4) NOT NULL,
-  group_id INT, 
-  PRIMARY KEY (course_id, course_unit_id, year, semester),
+  UNIQUE (course_id, course_unit_id, year, semester),
   FOREIGN KEY (course_unit_id) REFERENCES course_unit(id) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (group_id) REFERENCES course_unit_group(id) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (course_id) REFERENCES course(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE INDEX course_course_unit_course_unit_id_idx ON course_course_unit (course_unit_id);
 CREATE INDEX course_course_unit_course_id_idx ON course_course_unit (course_id);
+
+
+CREATE TABLE course_course_unit_path (
+  id SERIAL PRIMARY KEY,
+  course_course_unit_id INTEGER NOT NULL,
+  course_path_id INTEGER NOT NULL,
+  UNIQUE (course_course_unit_id, course_path_id),
+  FOREIGN KEY (course_course_unit_id) REFERENCES course_course_unit(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (course_path_id) REFERENCES course_path(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE course_course_unit_group (
+  id SERIAL PRIMARY KEY,
+  course_course_unit_id INTEGER NOT NULL,
+  course_unit_group_id INTEGER NOT NULL,
+  UNIQUE (course_course_unit_id, course_unit_group_id),
+  FOREIGN KEY (course_course_unit_id) REFERENCES course_course_unit(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (course_unit_group_id) REFERENCES course_unit_group(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
 
 
 CREATE TABLE professor (
@@ -106,24 +138,26 @@ CREATE TABLE info (
 
 CREATE TABLE review (
   id SERIAL PRIMARY KEY,
-  review TEXT NOT NULL,
-  general TEXT,
-  evaluation TEXT,
-  evaluationrating INT,
-  work TEXT,
-  workrating INT,
-  content TEXT,
-  contentrating INT,
-  difficulty TEXT,
-  difficultyrating INT,
-  teachers TEXT,
-  teachersrating INT,
-  relevance TEXT,
-  relevancerating INT,
   course_unit_id INT NOT NULL,
-  username VARCHAR(100),
-  created_at TIMESTAMP NOT NULL,
-  updated_at TIMESTAMP NOT NULL,
+  review TEXT,
+  general SMALLINT CHECK (general BETWEEN 1 AND 5),
+  evaluation TEXT,
+  evaluationrating SMALLINT CHECK (general BETWEEN 1 AND 5),
+  work TEXT,
+  workrating SMALLINT CHECK (general BETWEEN 1 AND 5),
+  content TEXT,
+  contentrating SMALLINT CHECK (general BETWEEN 1 AND 5),
+  difficulty TEXT,
+  difficultyrating SMALLINT CHECK (general BETWEEN 1 AND 5),
+  teachers TEXT,
+  teachersrating SMALLINT CHECK (general BETWEEN 1 AND 5),
+  relevance TEXT,
+  relevancerating SMALLINT CHECK (general BETWEEN 1 AND 5),
+  username TEXT,
+  user_id VARCHAR(10) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+  UNIQUE (course_unit_id, user_id),
   FOREIGN KEY (course_unit_id) REFERENCES course_unit(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -147,3 +181,31 @@ CREATE TABLE exchange_faculty_course (
   FOREIGN KEY (exchange_faculty_id) REFERENCES exchange_faculty(id) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (course_id) REFERENCES course(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE TABLE erasmus_review (
+  id SERIAL PRIMARY KEY,
+  review TEXT ,
+  general TEXT,
+  teaching TEXT,
+  teachingrating INT,
+  studentenv TEXT,
+  studentenvrating INT,
+  cost TEXT,
+  costrating INT,
+  difficulty TEXT,
+  difficultyrating INT,
+  teachers TEXT,
+  teachersrating INT,
+  english TEXT,
+  englishrating INT,
+  adaptation TEXT,
+  adaptationrating INT,
+  exchange_faculty_id VARCHAR(200) NOT NULL,
+  username VARCHAR(100),
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL,
+  user_id INT,
+  FOREIGN KEY (exchange_faculty_id) REFERENCES exchange_faculty(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE INDEX erasmus_review_exchange_faculty_id_idx ON erasmus_review (exchange_faculty_id);
+
