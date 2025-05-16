@@ -10,6 +10,7 @@ from datetime import datetime
 import pandas as pd
 import logging
 import json
+from io import StringIO
 
 # from scrapper.settings import CONFIG
 
@@ -46,7 +47,7 @@ class CourseUnitSpider(scrapy.Spider):
             'pv_password': self.password
         }))
 
-    def start_requests(self):
+    async def start(self):
         "This function is called before crawling starts."
         if self.password is None:
             self.password = getpass.getpass(prompt='Password: ', stream=None)
@@ -174,15 +175,15 @@ class CourseUnitSpider(scrapy.Spider):
         study_cycles = response.xpath('//h3[text()="Ciclos de Estudo/Cursos"]/following-sibling::table[1]').get()
         if study_cycles is None:
             return
-        df = pd.read_html(study_cycles, decimal=',', thousands='.', extract_links="all")[0]
+        df = pd.read_html(StringIO(study_cycles), decimal=',', thousands='.', extract_links="all")[0]
         for (_, row) in df.iterrows():
-                if(parse_qs(urlparse(row[0][1]).query).get('pv_curso_id')[0] == str(response.meta['course_id'])):
+                if(parse_qs(urlparse(row.iloc[0][1]).query).get('pv_curso_id')[0] == str(response.meta['course_id'])):
                     cu = CourseCourseUnit(
-                            course_id= parse_qs(urlparse(row[0][1]).query).get('pv_curso_id')[0],
+                            course_id= parse_qs(urlparse(row.iloc[0][1]).query).get('pv_curso_id')[0],
                             course_unit_id=course_unit_id,
-                            year=row[3][0],
+                            year=row.iloc[3][0],
                             semester=semester,
-                            ects=row[5][0],
+                            ects=row.iloc[5][0],
                             )
                     hash_ccu = hashlib.md5((cu['course_id']+cu['course_unit_id']+cu['year']+ cu['semester']).encode()).hexdigest()
                     if(hash_ccu not in self.course_courses_units_hashes):

@@ -26,7 +26,7 @@ class ExchangeFacultySpider(scrapy.Spider):
         self.open_config()
         self.user = USERNAME
         self.password = PASSWORD
-        self.professor_name_pattern = "\d+\s-\s[A-zÀ-ú](\s[A-zÀ-ú])*"
+        self.professor_name_pattern = r"\d+\s-\s[A-zÀ-ú](\s[A-zÀ-ú])*"
         self.inserted_teacher_ids = set()
 
     def open_config(self):
@@ -43,7 +43,7 @@ class ExchangeFacultySpider(scrapy.Spider):
             'pv_password': self.password
         }))
 
-    def start_requests(self):
+    async def start(self):
         """This function is called before crawling starts."""
 
         if self.password is None:
