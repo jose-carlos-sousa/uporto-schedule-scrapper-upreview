@@ -52,18 +52,34 @@ CREATE TABLE `course_unit` (
 --
 
 CREATE TABLE `course_course_unit` (
+  `id` INTEGER PRIMARY KEY,
   `course_id` int(11) NOT NULL,
   `course_unit_id` int(11) NOT NULL,
   `year` tinyint(4) NOT NULL,
   `semester`  NOT NULL,
   `ects` float(4) NOT NULL,
-  `group_id` int(11),
-  PRIMARY KEY (`course_id`, `course_unit_id`, `year`, `semester`),
+  UNIQUE (`course_id`, `course_unit_id`, `year`, `semester`),
   FOREIGN KEY (`course_unit_id`) REFERENCES `course_unit`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (`course_id`) REFERENCES `course`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (`group_id`) REFERENCES `course_unit_group`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (`course_id`) REFERENCES `course`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+CREATE TABLE `course_course_unit_path` (
+  `id` INTEGER PRIMARY KEY,
+  `course_course_unit_id` int(11) NOT NULL,
+  `course_path_id` int(11) NOT NULL,
+  UNIQUE (`course_course_unit_id`, `course_path_id`),
+  FOREIGN KEY (`course_course_unit_id`) REFERENCES `course_course_unit`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`course_path_id`) REFERENCES `course_path`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE `course_course_unit_group` (
+  `id` INTEGER PRIMARY KEY,
+  `course_course_unit_id` int(11) NOT NULL,
+  `course_unit_group_id` int(11) NOT NULL,
+  UNIQUE (`course_course_unit_id`, `course_unit_group_id`),
+  FOREIGN KEY (`course_course_unit_id`) REFERENCES `course_course_unit`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (`course_unit_group_id`) REFERENCES `course_unit_group`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
 
 --
 -- Table structure for table `professor`
@@ -95,7 +111,23 @@ CREATE TABLE `course_unit_professor` (
 
 CREATE TABLE `course_unit_group` (
   `id` INTEGER PRIMARY KEY,
-  `name` varchar(200) NOT NULL
+  `name` varchar(200) NOT NULL,
+  `path_id` int(11),
+  FOREIGN KEY (`path_id`) REFERENCES `course_path`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- --------------------------------------------------------
+--
+-- Table structure for table `course_path`
+--
+
+CREATE TABLE `course_path` (
+  `id` INTEGER PRIMARY KEY,
+  `code` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `course_id` int(11) NOT NULL,
+  UNIQUE (`code` , `course_id`),
+  FOREIGN KEY (`course_id`) REFERENCES `course`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 

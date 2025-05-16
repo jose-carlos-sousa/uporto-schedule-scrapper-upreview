@@ -3,6 +3,7 @@ import hashlib
 from ..items import  CourseUnitGroup
 from ..database.Database import Database
 from urllib.parse import urlparse, parse_qs, urlencode
+import re
 
 
 class CourseUnitGroupSpider(scrapy.Spider):
@@ -91,6 +92,50 @@ class CourseUnitGroupSpider(scrapy.Spider):
                             self.logger.warning(f"Failed to parse course unit ID from link {link}")
                     else:
                         self.logger.warning(f"No link found for course unit in group: {group_name}")
+        pattern = re.compile(r'^div_\d+_id_')
+        divs = response.xpath('//div[starts-with(@id, "div_") and contains(@id, "_id_")]')
+        for group_div in divs:
+            id = group_div.xpath('@id').get()
+            if id and pattern.match(id):
+                group_title = group_div.xpath('.//h3/text()').extract_first()
+                if group_title:
+                    group_name = group_title.strip()
+                    div_id = group_div.xpath('./@id').extract_first().split("_")[3]
+
+                    # Extract the year from the corresponding <a> tag
+                    year_element = response.xpath(f'//a[contains(@id, "bloco_acurr_ShowOrHide") and contains(@href, "{div_id}")]')
+                    year_text = year_element.xpath('normalize-space(text())').get()
+                    year = year_text.split("º")[0] if year_text else "Unknown"
+
+                    course_rows = group_div.xpath('.//table[contains(@class, "dadossz")]/tr')
+                    if(len(course_rows) == 1):
+                        continue
+                    for row in course_rows:
+                        link = row.xpath('.//td[@class="t"]/a/@href').extract_first()
+                        if link:
+                            year = row.xpath('.//td[5]/text()').get().split("º")[0].strip()
+                            if not year:
+                                self.logger.warning(f"No year found for row: {row}")
+                                year = "Unknown" 
+                            try:
+                                course_unit_id = link.split("pv_ocorrencia_id=")[1].split("&")[0]
+                                course_unit_url = f'https://sigarra.up.pt/feup/pt/ucurr_geral.ficha_uc_view?pv_ocorrencia_id={course_unit_id}'
+                                yield scrapy.Request(
+                                    url=course_unit_url,
+                                    callback=self.parse_course_unit_page,
+                                    meta={
+                                        'course_id': course_id,
+                                        'group_name': group_name,
+                                        'course_unit_id': course_unit_id,
+                                        'div_id': div_id,
+                                        'year': year  # Include the extracted year
+                                    }
+                                )
+                            except IndexError:
+                                self.logger.warning(f"Failed to parse course unit ID from link {link}")
+                        else:
+                            self.logger.warning(f"No link found for course unit in group: {group_name}")
+
 
         
     def parse_course_unit_page(self, response): #Scrape the course unit page to get the course unit name and acronym
@@ -109,10 +154,24 @@ class CourseUnitGroupSpider(scrapy.Spider):
           )
         
         sql = """
-            UPDATE course_course_unit
-            SET group_id = ?
+            SELECT id FROM course_course_unit
             WHERE course_unit_id = ? AND course_id = ? AND year = ? AND semester = ?
             """
-        self.db.cursor.execute(sql, (response.meta['div_id'],course_unit_id, response.meta['course_id'], response.meta['year'], semester))
-        
-  
+        self.db.cursor.execute(sql, (course_unit_id, response.meta['course_id'], response.meta['year'], semester))
+        course_course_unit_id = self.db.cursor.fetchone()
+        if course_course_unit_id:
+            course_course_unit_id = course_course_unit_id[0]
+        else:
+            print("course_course_unit_id not found.")
+            return
+        try:
+            sql = """
+                INSERT INTO course_course_unit_group (course_course_unit_id, course_unit_group_id)
+                VALUES (?, ?)
+            """
+            params = (course_course_unit_id, response.meta['div_id'])
+
+            self.db.cursor.execute(sql, params)
+            self.db.connection.commit()
+        except:
+            print("ERROR in insert course_course_unit_group")
