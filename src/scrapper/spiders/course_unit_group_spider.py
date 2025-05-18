@@ -47,8 +47,6 @@ class CourseUnitGroupSpider(scrapy.Spider):
             print(f"No Planos de Estudos link found for course ID: {response.meta['course_id']}")
             
     
-
-
     def parse_course_plan(self, response):
         group_divs = response.xpath('//div[contains(@id, "div_id_")]')
         course_id = response.meta['course_id']

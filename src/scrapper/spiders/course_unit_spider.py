@@ -86,40 +86,46 @@ class CourseUnitSpider(scrapy.Spider):
         self.log("Crawling {} courses".format(len(self.courses)))
 
         for course in self.courses:
+            course_id, year, faculty_acronym = course
             yield scrapy.http.Request(
-                url='https://sigarra.up.pt/{}/pt/ucurr_geral.pesquisa_ocorr_ucs_list?pv_ano_lectivo={}&pv_curso_id={}'.format(
-                    course[2], course[1], course[0]),
-                meta={'course_id': course[0]},
-                callback=self.extractSearchPages)
+                url = f'https://sigarra.up.pt/{faculty_acronym}/pt/cur_geral.cur_view?pv_ano_lectivo={year}&pv_origem=CUR&pv_tipo_cur_sigla=M&pv_curso_id={course_id}',
+                meta={'course_id': course_id, 'year': year, 'faculty_acronym': faculty_acronym},
+                callback=self.extractStudyPlanPages)
             
-    def extractSearchPages(self, response):
-        last_page_url = response.css(
-            ".paginar-saltar-barra-posicao > div:last-child > a::attr(href)").extract_first()
-        last_page = int(parse_qs(urlparse(last_page_url).query)[
-            'pv_num_pag'][0]) if last_page_url is not None else 1
-        for x in range(1, last_page + 1):
-            yield scrapy.http.Request(
-                url=response.url + "&pv_num_pag={}".format(x),
-                meta=response.meta,
-                callback=self.extractCourseUnits)
-
+    def extractStudyPlanPages(self, response):
+        plan_link = response.xpath('//h3[text()="Planos de Estudos"]/following-sibling::div//ul/li/a/@href').extract_first()
+        if plan_link:
+            plan_id = plan_link.split("pv_plano_id=")[1].split("&")[0]
+            plan_url = f'https://sigarra.up.pt/{response.meta["faculty_acronym"]}/pt/cur_geral.cur_planos_estudos_view?pv_plano_id={plan_id}&pv_ano_lectivo={response.meta["year"]}&pv_tipo_cur_sigla=M'
+            yield scrapy.Request(url=plan_url, callback=self.extractCourseUnits, meta=response.meta)
+        else:
+            print(f"No Planos de Estudos link found for course ID: {response.meta['course_id']}")
+        
     def extractCourseUnits(self, response):
-        course_units_table = response.css("table.dados .d")
-
-        for course_unit_row in course_units_table:
-            yield scrapy.http.Request(
-                url=response.urljoin(course_unit_row.css(
-                    ".t > a::attr(href)").extract_first()),
-                meta=response.meta,
-                callback=self.extractCourseUnitInfo)
+        course_rows = response.xpath('.//table[contains(@class, "dadossz")]/tr')
+        for row in course_rows:
+            link = row.xpath('.//td[@class="t"]/a/@href').extract_first()
+            if link and not link.strip().lower().startswith("javascript:"):  
+                yield scrapy.http.Request(
+                    url=response.urljoin(link),
+                    meta=response.meta,
+                    callback=self.extractCourseUnitInfo)
 
     def extractCourseUnitInfo(self, response):
-        name = response.xpath(
-            '//div[@id="conteudoinner"]/h1[2]/text()').extract_first().strip()
+        content = response.xpath('//div[@id="conteudoinner"]/h1[2]/text()').get()
+        if not content:
+            href = response.xpath('//td[@class="k t"]/a/@href').get()
+            yield scrapy.http.Request(
+                    url=response.urljoin(href),
+                    meta=response.meta,
+                    callback=self.extractCourseUnitInfo)
+            return
+        else: 
+            name = content.strip()
 
         # Checks if the course unit page is valid.
         # If name == 'Sem Resultados', then it is not.
-        if name == 'Sem Resultados':
+        if name == 'Sem Resultados' or name == '':
             return None  # Return None as yielding would continue the program and crash at the next assert
 
         current_occurence_id = parse_qs(urlparse(response.url).query)['pv_ocorrencia_id'][0]
