@@ -71,34 +71,16 @@ Università degli Studi di Teramo #!#Università degli Studi di Teramo
 Università Degli Studi di Torino #!#Università Degli Studi di Torino 
 Universitatea de Stiinte Agricole si Medicina Veterinaria Cluj-Napoca #!#Universitatea de Stiinte Agricole si Medicina Veterinaria Cluj-Napoca 
 Univerzita Veterinárskeho Lekárstva a Farmácie v Košiciach #!#Univerzita Veterinárskeho Lekárstva a Farmácie v Košiciach 
-Universiteit Gent #!#Universiteit Gent 
-Université de Liège #!#Université de Liège 
-Masarykova Univerzita v Brno #!#Masarykova Univerzita v Brno 
-Freie Universität Berlin #!#Freie Universität Berlin 
-Universität Bielefeld #!#Universität Bielefeld 
-Johann Wolfgang Goethe-Universität Frankfurt am Main #!#Johann Wolfgang Goethe-Universität Frankfurt am Main 
-Universidad Complutense de Madrid #!#Universidad Complutense de Madrid 
-Universidad de Murcia #!#Universidad de Murcia 
-Università di Parma #!#Università di Parma 
-Libera Università Maria Ss. Assunta #!#Libera Università Maria Ss. Assunta 
-Mykolo Romerio Universitetas #!#Mykolo Romerio Universitetas 
-Uniwersytet Warszawski #!#Uniwersytet Warszawski 
 Medizinische Universitat Graz #!#Medizinische Universitat Graz 
-Universidade Federal de Pernambuco #!#Universidade Federal de Pernambuco 
 Université Catholique de  Louvain #!#Université Catholique de  Louvain 
 Universidade Federal de Ouro Preto #!#Universidade Federal de Ouro Preto 
-Univerzita Tomáse Bati ve Zlíne #!#Univerzita Tomáse Bati ve Zlíne 
 Universidade Regional do Noroeste do Estado do Rio Grande do Sul #!#Universidade Regional do Noroeste do Estado do Rio Grande do Sul 
 Univerzita Karlova  (Faculty of Pharmacy in Hradec Králové) #!#Univerzita Karlova  (Faculty of Pharmacy in Hradec Králové) 
-Universidad del País Vasco UPV  (Universidad del País Vasco UPV Name: 	EHU Euskal Herriko Unibertsitatea País:) #!#Universidad del País Vasco UPV  (Universidad del País Vasco UPV Name: 	EHU Euskal Herriko Unibertsitatea País:) 
-Universidad de Granada #!#Universidad de Granada 
+Freie Universität Berlin #!#Freie Universität Berlin 
 Universität Potsdam #!#Universität Potsdam 
 Universitat de Vic - Universitat Central de Catalunya #!#Universitat de Vic - Universitat Central de Catalunya 
-Universidad de Cantabria #!#Universidad de Cantabria 
 Debreceni Egyetem #!#Debreceni Egyetem 
-Université Paris 8 Vincennes - Saint-Denis #!#Université Paris 8 Vincennes - Saint-Denis 
 Università di Pisa #!#Università di Pisa 
-Università degli Studi G.D Annunzio Chieti-Pescara #!#Università degli Studi G.D Annunzio Chieti-Pescara 
 Università Degli Studi di Roma Tor Vergata #!#Università Degli Studi di Roma Tor Vergata 
 Università degli Studi dell'Insubria #!#Università degli Studi dell'Insubria 
 Università degli Studi del Piemonte Orientale "Amedeo Avogadro" #!#Università degli Studi del Piemonte Orientale "Amedeo Avogadro" 
@@ -107,451 +89,231 @@ Akademia Medyczna W Warszawie #!#Akademia Medyczna W Warszawie
 Uniwersytet Medyczny im. Piastow Slaskich we Wroclawiu #!#Uniwersytet Medyczny im. Piastow Slaskich we Wroclawiu 
 Lunds Universitet #!#Lunds Universitet 
 UNIVERZITA PAVLA JOZEFA SAFARIKA V KOSICIACH #!#UNIVERZITA PAVLA JOZEFA SAFARIKA V KOSICIACH 
-Pontifícia Universidade Católica do Rio de Janeiro #!#Pontifícia Universidade Católica do Rio de Janeiro 
-Pontifícia Universidade Católica de São Paulo #!#Pontifícia Universidade Católica de São Paulo 
-Universidade de Caxias do Sul #!#Universidade de Caxias do Sul 
-Universidade Estadual de Campinas #!#Universidade Estadual de Campinas 
-Universidad de Burgos #!#Universidad de Burgos 
-Universidad De Oviedo #!#Universidad De Oviedo 
-Universidad de Santiago de Compostela #!#Universidad de Santiago de Compostela 
-Universitat Rovira I Virgili - URV #!#Universitat Rovira I Virgili - URV 
-Universidad de La Laguna #!#Universidad de La Laguna 
-Universitat de Valencia #!#Universitat de Valencia 
-Université de Lille #!#Université de Lille 
-Université of Paris Cité #!#Université of Paris Cité 
-Radboud Universiteit Nijmegen #!#Radboud Universiteit Nijmegen 
-Universidade Nova de Lisboa #!#Universidade Nova de Lisboa 
-Universidade de Lisboa #!#Universidade de Lisboa 
-Katholieke Universiteit Leuven #!#Katholieke Universiteit Leuven 
-Universidade do Estado do Rio de Janeiro #!#Universidade do Estado do Rio de Janeiro 
-Universidade do Vale do Rio dos Sinos #!#Universidade do Vale do Rio dos Sinos 
-Universität Kassel #!#Universität Kassel 
-Universitat de Barcelona #!#Universitat de Barcelona 
-Universitat Jaume I #!#Universitat Jaume I 
 Universidad de Buenos Aires #!#Universidad de Buenos Aires 
 ATITUS EDUCAÇÃO #!#ATITUS EDUCAÇÃO 
 Centro Universitário Cesmac #!#Centro Universitário Cesmac 
 Universidade de São Paulo - Faculdade de Odontologia de Ribeirão Preto #!#Universidade de São Paulo - Faculdade de Odontologia de Ribeirão Preto 
 Universidade Estadual de Ponta Grossa #!#Universidade Estadual de Ponta Grossa 
 Universidade de Fortaleza #!#Universidade de Fortaleza 
-Université de Tours #!#Université de Tours 
-Sveuciliste Josipa Jurja Strossmayera u Osijeku (Josip Juraj Strossmayer University of Osijek) #!#Sveuciliste Josipa Jurja Strossmayera u Osijeku (Josip Juraj Strossmayer University of Osijek) 
+Universidad del País Vasco UPV #!#Universidad del País Vasco UPV 
+Universidad Complutense de Madrid #!#Universidad Complutense de Madrid 
+Universidad de Murcia #!#Universidad de Murcia 
+Universidad De Oviedo #!#Universidad De Oviedo 
 Universidad de Salamanca #!#Universidad de Salamanca 
+Université of Paris Cité #!#Université of Paris Cité 
 Lietuvos Sveikatos Mokslu Universitetas #!#Lietuvos Sveikatos Mokslu Universitetas 
-Tilburg University #!#Tilburg University 
 Universitatea de Medicina si Farmacie din Targu-Mures #!#Universitatea de Medicina si Farmacie din Targu-Mures 
 Universitatea de Medicină şi Farmacie Victor Babes #!#Universitatea de Medicină şi Farmacie Victor Babes 
-JYVÄSKYLÄN YLIOPISTO #!#JYVÄSKYLÄN YLIOPISTO 
 EGE ÜNIVERSITESI #!#EGE ÜNIVERSITESI 
 Bulent Ecevit Universitesi #!#Bulent Ecevit Universitesi 
-Vrije Universiteit Brussel #!#Vrije Universiteit Brussel 
-Centro Universitário do Estado do Pará #!#Centro Universitário do Estado do Pará 
-Ibmec Educacional S.A #!#Ibmec Educacional S.A 
+Haute Ecole Leonard De Vinci - ECAM #!#Haute Ecole Leonard De Vinci - ECAM 
+Centro Universitário São Camilo #!#Centro Universitário São Camilo 
+Universidade de São Paulo - Faculdade de Saúde Pública #!#Universidade de São Paulo - Faculdade de Saúde Pública 
+Pontifícia Universidade Católica do Paraná #!#Pontifícia Universidade Católica do Paraná 
+Universidade Federal de Goiás #!#Universidade Federal de Goiás 
 Universidade Federal de Lavras #!#Universidade Federal de Lavras 
+Universidade Federal de Pernambuco #!#Universidade Federal de Pernambuco 
+Universidade Federal de Pelotas #!#Universidade Federal de Pelotas 
+Universidade Federal do Paraná #!#Universidade Federal do Paraná 
+Universidade Federal do Triângulo Mineiro #!#Universidade Federal do Triângulo Mineiro 
+Universidade Federal de Uberlândia #!#Universidade Federal de Uberlândia 
+Universidade de Ribeirão Preto #!#Universidade de Ribeirão Preto 
+UNESC - Centro Universitário do Espirito Santo #!#UNESC - Centro Universitário do Espirito Santo 
+Universidade Católica de Santos #!#Universidade Católica de Santos 
+Universidade de Santa Cruz do Sul #!#Universidade de Santa Cruz do Sul 
+Haute École Spécialisée de Suisse Occidentale/ HES-SO Valais-Wallis #!#Haute École Spécialisée de Suisse Occidentale/ HES-SO Valais-Wallis 
+Justus Liebig Universität Giessen #!#Justus Liebig Universität Giessen 
+Universidad de Alicante #!#Universidad de Alicante 
+Universidad de Granada #!#Universidad de Granada 
+Universidad Catolica San Antonio de Murcia #!#Universidad Catolica San Antonio de Murcia 
+Universidad de Navarra #!#Universidad de Navarra 
+Universidad Europea del Atlántico #!#Universidad Europea del Atlántico 
+Universidad de Pablo de Olavide #!#Universidad de Pablo de Olavide 
+Universitat Rovira I Virgili - URV #!#Universitat Rovira I Virgili - URV 
+Humboldt-Universität  Zu Berlin #!#Humboldt-Universität  Zu Berlin 
+Universitat de Valencia #!#Universitat de Valencia 
+Fredrich-Schiller-Universität Jena #!#Fredrich-Schiller-Universität Jena 
+Universita Degli Studi Di Camerino #!#Universita Degli Studi Di Camerino 
+Universidad de Almeria #!#Universidad de Almeria 
+Università Campus Bio-Medico di Roma #!#Università Campus Bio-Medico di Roma 
+Technological University Dublin #!#Technological University Dublin 
+Universitat de Barcelona #!#Universitat de Barcelona 
+Oslo Metropolitan University #!#Oslo Metropolitan University 
+Universidad de Cádiz #!#Universidad de Cádiz 
+University of Life Sciences in Lublin #!#University of Life Sciences in Lublin 
+Universidad Loyola Andalucia #!#Universidad Loyola Andalucia 
+Západočeská Univerzita v Plzni #!#Západočeská Univerzita v Plzni 
+Universidad Miguel Hernandez de Elche #!#Universidad Miguel Hernandez de Elche 
+Uniwersytet Przyrodniczy w Poznaniu #!#Uniwersytet Przyrodniczy w Poznaniu 
+Muthesius Kunsthochschule #!#Muthesius Kunsthochschule 
+Szkola Glowna Gospodarstwa Wiejskiego #!#Szkola Glowna Gospodarstwa Wiejskiego 
+Universidad Huelva #!#Universidad Huelva 
+Umeå University #!#Umeå University 
+Ankara Üniversitesi #!#Ankara Üniversitesi 
+Escuela Superior de Diseño de Madrid #!#Escuela Superior de Diseño de Madrid 
+Universitat de Lleida #!#Universitat de Lleida 
+Atatürk Üniversitesi #!#Atatürk Üniversitesi 
+Universitat Politècnica de València #!#Universitat Politècnica de València 
+Universidad Politécnica de Madrid #!#Universidad Politécnica de Madrid 
+Istanbul Medipol Üniversitesi #!#Istanbul Medipol Üniversitesi 
+Ecole Supérieure d'Art d'Aix-en-Provence #!#Ecole Supérieure d'Art d'Aix-en-Provence 
+Universidad Alfonso X El Sabio #!#Universidad Alfonso X El Sabio 
+Hue University #!#Hue University 
+École supérieure d'art et de design TALM #!#École supérieure d'art et de design TALM 
+Universidad Rey Juan Carlos #!#Universidad Rey Juan Carlos 
+Beaux-Arts Nantes Saint-Nazaire #!#Beaux-Arts Nantes Saint-Nazaire 
+Universidad Francisco de Vitoria #!#Universidad Francisco de Vitoria 
+École Nationale Supérieure des Arts Décoratifs #!#École Nationale Supérieure des Arts Décoratifs 
+Universidad de Málaga #!#Universidad de Málaga 
+Academia di Belle Arti di Bologna #!#Academia di Belle Arti di Bologna 
+Fundació TecnoCampus Mataró-Maresme #!#Fundació TecnoCampus Mataró-Maresme 
+Accademia di Belle Arti Macerata #!#Accademia di Belle Arti Macerata 
+Politecnico di Milano #!#Politecnico di Milano 
+Universidad Publica de Navarra #!#Universidad Publica de Navarra 
+Accademia di Belle Arti de Brera, Milano #!#Accademia di Belle Arti de Brera, Milano 
+Universidad Pontificia de Salamanca #!#Universidad Pontificia de Salamanca 
+Accademia di Belle Arti di Napoli #!#Accademia di Belle Arti di Napoli 
+Universidad de La Laguna #!#Universidad de La Laguna 
+Accademia di Belle Arti di Verona #!#Accademia di Belle Arti di Verona 
+Latvijas Makslas Akademija #!#Latvijas Makslas Akademija 
+Vrije Universiteit Brussel #!#Vrije Universiteit Brussel 
+Universidad de Valladolid #!#Universidad de Valladolid 
+AVANS Hogeschool #!#AVANS Hogeschool 
+Universiteit Gent #!#Universiteit Gent 
+Hogeschool Rotterdam and Omstreken (Willem de Kooning Academy) #!#Hogeschool Rotterdam and Omstreken (Willem de Kooning Academy) 
+Katholieke Universiteit Leuven #!#Katholieke Universiteit Leuven 
+Akademia Szruk Pieknych w Gdansku #!#Akademia Szruk Pieknych w Gdansku 
+Université de Liège #!#Université de Liège 
+Université Evry Val-d'Essonne #!#Université Evry Val-d'Essonne 
+Université de Lille #!#Université de Lille 
+Akademia Sztuk Pieknych W Katowicach (ASP) #!#Akademia Sztuk Pieknych W Katowicach (ASP) 
+Centro Universitário do Estado do Pará #!#Centro Universitário do Estado do Pará 
+Université Côte d'Azur (UCA) #!#Université Côte d'Azur (UCA) 
+Akademia Sztuk Pięknych we Wrocławiu #!#Akademia Sztuk Pięknych we Wrocławiu 
+Ibmec Educacional S.A #!#Ibmec Educacional S.A 
+Université de Rouen #!#Université de Rouen 
+Ethniko Kai Kapodistriako Panepistimio Athinon #!#Ethniko Kai Kapodistriako Panepistimio Athinon 
+Akademie der Bildenken Künste Wien #!#Akademie der Bildenken Künste Wien 
+Pontifícia Universidade Católica do Rio de Janeiro #!#Pontifícia Universidade Católica do Rio de Janeiro 
+Università Telematica eCampus #!#Università Telematica eCampus 
+Velikoturnovski Universitet SV. SV. Kiril I Metodii #!#Velikoturnovski Universitet SV. SV. Kiril I Metodii 
+Universidade do Estado do Rio de Janeiro #!#Universidade do Estado do Rio de Janeiro 
+Università degli Studi di Napoli #!#Università degli Studi di Napoli 
+Akademie Vytvarnych Umeni V Praze #!#Akademie Vytvarnych Umeni V Praze 
 Fundação Universidade Federal de Mato Grosso do Sul #!#Fundação Universidade Federal de Mato Grosso do Sul 
+Lithuanian Sports University #!#Lithuanian Sports University 
+Akademia Wychowania Fizycznego Jozefa Pilsudskiego w Warszawie #!#Akademia Wychowania Fizycznego Jozefa Pilsudskiego w Warszawie 
+Academy of Fine Arts Leipzig #!#Academy of Fine Arts Leipzig 
+Akademia Wychowania Fizycznego we Wroclawiu #!#Akademia Wychowania Fizycznego we Wroclawiu 
+AKADEMIE DER BILDENDEN KÜNSTE MÜNCHEN #!#AKADEMIE DER BILDENDEN KÜNSTE MÜNCHEN 
+Universitatea din Oradea #!#Universitatea din Oradea 
 Universidade da Região de Joinville - UNIVILLE #!#Universidade da Região de Joinville - UNIVILLE 
 Université de Montréal #!#Université de Montréal 
-Humboldt-Universität  Zu Berlin #!#Humboldt-Universität  Zu Berlin 
+Masarykova Univerzita v Brno #!#Masarykova Univerzita v Brno 
+École européenne supérieure d'art de Bretagne #!#École européenne supérieure d'art de Bretagne 
 Friederich-Alexander-Universität Erlangen-Nürnberg #!#Friederich-Alexander-Universität Erlangen-Nürnberg 
 Ruprecht-Karls-Universität Heidelberg #!#Ruprecht-Karls-Universität Heidelberg 
 Universitat Leipzig #!#Universitat Leipzig 
+Accademia di Belle Arti Pietro Vannucci #!#Accademia di Belle Arti Pietro Vannucci 
 Eberhard-Karls-Universität Tubingen #!#Eberhard-Karls-Universität Tubingen 
 Universidad Católica Santa Teresa de Jesús de Ávila #!#Universidad Católica Santa Teresa de Jesús de Ávila 
 Universidad Isabel I #!#Universidad Isabel I 
-Universidad de Cádiz #!#Universidad de Cádiz 
+Vysoká Skola Vytvarnych Umení v Bratislave #!#Vysoká Skola Vytvarnych Umení v Bratislave 
 Universidad de Castilla la Mancha #!#Universidad de Castilla la Mancha 
-Universidad Miguel Hernandez de Elche #!#Universidad Miguel Hernandez de Elche 
 Universidad Pontificia Comillas #!#Universidad Pontificia Comillas 
-Universidad Catolica San Antonio de Murcia #!#Universidad Catolica San Antonio de Murcia 
-Universidad de Navarra #!#Universidad de Navarra 
+Universidad de Cantabria #!#Universidad de Cantabria 
+Technische Universität Graz - Erzherzog Johann Universität #!#Technische Universität Graz - Erzherzog Johann Universität 
+ECOLE SUPERIEURE D'ART ET DESIGN LE HAVRE ROUEN #!#ECOLE SUPERIEURE D'ART ET DESIGN LE HAVRE ROUEN 
+Universidad de Santiago de Compostela #!#Universidad de Santiago de Compostela 
 Universidad de Sevilla #!#Universidad de Sevilla 
-Universidad de Valladolid #!#Universidad de Valladolid 
+Escola da Cidade - USP #!#Escola da Cidade - USP 
 Tartu Ulikool #!#Tartu Ulikool 
+Universidade Presbiteriana Mackenzie #!#Universidade Presbiteriana Mackenzie 
 Université de Pau et des Pays de l`Adour #!#Université de Pau et des Pays de l`Adour 
 Université de Poitiers #!#Université de Poitiers 
-Université de Strasbourg #!#Université de Strasbourg 
-Université Toulouse I Capitole #!#Université Toulouse I Capitole 
-Eotvos Lorand Tudomanyegyetem #!#Eotvos Lorand Tudomanyegyetem 
-Università degli Studi di Catania #!#Università degli Studi di Catania 
-Università Cattolica Del Sacro Cuore - Milano #!#Università Cattolica Del Sacro Cuore - Milano 
-Università degli Studi di Napoli "L'Orientale" #!#Università degli Studi di Napoli "L'Orientale" 
-Universita  Degli Studi Mediterranea Di Reggio Calabria #!#Universita  Degli Studi Mediterranea Di Reggio Calabria 
-Università degli studi Verona #!#Università degli studi Verona 
-Universidade de Macau #!#Universidade de Macau 
-Erasmus University Rotterdam #!#Erasmus University Rotterdam 
-Uniwersytet Wroclawski #!#Uniwersytet Wroclawski 
-VYSOKA SKOLA BANSKA - TECHNICKA UNIVERZITA OSTRAVA #!#VYSOKA SKOLA BANSKA - TECHNICKA UNIVERZITA OSTRAVA 
-Universiteit Twente  (S&T - Faculty of Science and Technology) #!#Universiteit Twente  (S&T - Faculty of Science and Technology) 
-Karlsruher Institut fur Technologie #!#Karlsruher Institut fur Technologie 
-Politecnico di Milano  (Politecnico di Milano (campus Bovisa)) #!#Politecnico di Milano  (Politecnico di Milano (campus Bovisa)) 
-Rigas Tehniska Universitate #!#Rigas Tehniska Universitate 
-LINKÖPINGS UNIVERSITET #!#LINKÖPINGS UNIVERSITET 
-University of Vaasa #!#University of Vaasa 
-Technische Universität Chemnitz #!#Technische Universität Chemnitz 
-Haute Ecole Leonard De Vinci - ECAM #!#Haute Ecole Leonard De Vinci - ECAM 
-Riga Technical University Liepaja Academy #!#Riga Technical University Liepaja Academy 
-CHALMERS TEKNISKA HÖGSKOLA #!#CHALMERS TEKNISKA HÖGSKOLA 
-Centro Universitário São Camilo #!#Centro Universitário São Camilo 
-Universidade de São Paulo - Faculdade de Saúde Pública #!#Universidade de São Paulo - Faculdade de Saúde Pública 
-Universidade de São Paulo - Escola de Comunicações e Artes #!#Universidade de São Paulo - Escola de Comunicações e Artes 
-Pontifícia Universidade Católica do Paraná #!#Pontifícia Universidade Católica do Paraná 
-IMT Atlantique #!#IMT Atlantique 
-Universidade Federal de Goiás #!#Universidade Federal de Goiás 
-Oslo Metropolitan University #!#Oslo Metropolitan University 
-Tampereen yliopisto #!#Tampereen yliopisto 
-Universidade Federal de Pelotas #!#Universidade Federal de Pelotas 
-Universidade Federal do Paraná #!#Universidade Federal do Paraná 
-Hacettepe Üniversitesi #!#Hacettepe Üniversitesi 
-Centro Federal de Educação Tecnológica de Minas Gerais #!#Centro Federal de Educação Tecnológica de Minas Gerais 
-Universidade Federal do Triângulo Mineiro #!#Universidade Federal do Triângulo Mineiro 
-Universidade de São Paulo - Escola Politécnica #!#Universidade de São Paulo - Escola Politécnica 
-Instituto Militar de Engenharia #!#Instituto Militar de Engenharia 
-Universidade Federal de Uberlândia #!#Universidade Federal de Uberlândia 
-Universidade de Ribeirão Preto #!#Universidade de Ribeirão Preto 
-Universidade Federal da Bahia #!#Universidade Federal da Bahia 
-UNESC - Centro Universitário do Espirito Santo #!#UNESC - Centro Universitário do Espirito Santo 
-Universidade Federal de Minas Gerais #!#Universidade Federal de Minas Gerais 
-Universidade Católica de Santos #!#Universidade Católica de Santos 
-Universidade de Santa Cruz do Sul #!#Universidade de Santa Cruz do Sul 
-Universidade Federal de Alfenas #!#Universidade Federal de Alfenas 
-Haute École Spécialisée de Suisse Occidentale/ HES-SO Valais-Wallis #!#Haute École Spécialisée de Suisse Occidentale/ HES-SO Valais-Wallis 
-Universidade Federal de Itajubá #!#Universidade Federal de Itajubá 
-Justus Liebig Universität Giessen #!#Justus Liebig Universität Giessen 
-Pontifícia Universidad Católica de Chile #!#Pontifícia Universidad Católica de Chile 
-Universidad de Alicante #!#Universidad de Alicante 
-Universidad Huelva #!#Universidad Huelva 
-Universidad Politécnica de Madrid  (ETSI Minas y Energía) #!#Universidad Politécnica de Madrid  (ETSI Minas y Energía) 
-Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie #!#Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie 
-Georg-August-Universität Göttingen #!#Georg-August-Universität Göttingen 
-Dumlupinar Üniversitesi #!#Dumlupinar Üniversitesi 
-Fachhochschule Erfurt #!#Fachhochschule Erfurt 
-Universidad Europea del Atlántico #!#Universidad Europea del Atlántico 
-Universidad de Pablo de Olavide #!#Universidad de Pablo de Olavide 
-Technische Universität Kaiserslautern #!#Technische Universität Kaiserslautern 
-Technische Universität Graz - Erzherzog Johann Universität #!#Technische Universität Graz - Erzherzog Johann Universität 
-Akademie der Bildenken Künste Wien #!#Akademie der Bildenken Künste Wien 
-Università degli Studi di Trento #!#Università degli Studi di Trento 
-Universita Degli Studi Di Camerino #!#Universita Degli Studi Di Camerino 
-Aalto University #!#Aalto University 
-Università Campus Bio-Medico di Roma #!#Università Campus Bio-Medico di Roma 
-VYSOKÉ UCENÍ TECHNICKÉ V BRNE #!#VYSOKÉ UCENÍ TECHNICKÉ V BRNE 
-Universitatea Babes-Bolyai Cluj-Napoca #!#Universitatea Babes-Bolyai Cluj-Napoca 
-WAGENINGEN UNIVERSITEIT #!#WAGENINGEN UNIVERSITEIT 
-Escola da Cidade - USP #!#Escola da Cidade - USP 
-Technological University Dublin #!#Technological University Dublin 
-Instituto De Ciências Matemáticas e de Computação (ICMC) - USP #!#Instituto De Ciências Matemáticas e de Computação (ICMC) - USP 
-Umeå University #!#Umeå University 
-University of Life Sciences in Lublin #!#University of Life Sciences in Lublin 
-Uniwersytet im. Adama Mickiewicza #!#Uniwersytet im. Adama Mickiewicza 
-Univerzita Komenského v Bratislave #!#Univerzita Komenského v Bratislave 
-Uniwersytet Przyrodniczy w Poznaniu #!#Uniwersytet Przyrodniczy w Poznaniu 
-Ceské Vysoké Ucéni Technické v Praze #!#Ceské Vysoké Ucéni Technické v Praze 
-Universidade Presbiteriana Mackenzie #!#Universidade Presbiteriana Mackenzie 
-Szkola Glowna Gospodarstwa Wiejskiego #!#Szkola Glowna Gospodarstwa Wiejskiego 
-Centro Federal de Educação Tecnológica Celso Suckow da Fonseca #!#Centro Federal de Educação Tecnológica Celso Suckow da Fonseca 
-Technische Universität Berlin #!#Technische Universität Berlin 
-Universidade de São Paulo - Escola de Engenharia de Lorena #!#Universidade de São Paulo - Escola de Engenharia de Lorena 
-Universitat Politècnica de Catalunya #!#Universitat Politècnica de Catalunya 
 EPFL - École Polytechnique Fédérale de Lausanne #!#EPFL - École Polytechnique Fédérale de Lausanne 
+Université de Strasbourg #!#Université de Strasbourg 
 Università della Svizzera italiana #!#Università della Svizzera italiana 
-Ankara Üniversitesi #!#Ankara Üniversitesi 
-Escola de Engenharia de São Carlos-USP #!#Escola de Engenharia de São Carlos-USP 
+Université Toulouse I Capitole #!#Université Toulouse I Capitole 
 ZHAW Zurich University of Applied Sciences #!#ZHAW Zurich University of Applied Sciences 
-Atatürk Üniversitesi #!#Atatürk Üniversitesi 
+Pontifícia Universidad Católica de Chile #!#Pontifícia Universidad Católica de Chile 
+Eotvos Lorand Tudomanyegyetem #!#Eotvos Lorand Tudomanyegyetem 
 Pontifícia Universidad Católica de Valparaíso #!#Pontifícia Universidad Católica de Valparaíso 
-Istanbul Medipol Üniversitesi #!#Istanbul Medipol Üniversitesi 
 Universidad de Chile #!#Universidad de Chile 
-Hue University #!#Hue University 
+Università degli Studi di Catania #!#Università degli Studi di Catania 
 Universidad Nacional de Colombia #!#Universidad Nacional de Colombia 
-Università Degli Studi Della Tuscia #!#Università Degli Studi Della Tuscia 
+Università Cattolica Del Sacro Cuore - Milano #!#Università Cattolica Del Sacro Cuore - Milano 
+Ceské Vysoké Ucéni Technické v Praze #!#Ceské Vysoké Ucéni Technické v Praze 
+Università degli Studi di Napoli "L'Orientale" #!#Università degli Studi di Napoli "L'Orientale" 
 Rheinisch-Westfalische Technische Hochschule Aachen #!#Rheinisch-Westfalische Technische Hochschule Aachen 
-UiT - Norges Arktiske Universitet #!#UiT - Norges Arktiske Universitet 
-Politechnika Krakowska #!#Politechnika Krakowska 
-Západočeská Univerzita v Plzni #!#Západočeská Univerzita v Plzni 
-Universidade Federal do Pará #!#Universidade Federal do Pará 
+Technische Universität Berlin #!#Technische Universität Berlin 
+Universita  Degli Studi Mediterranea Di Reggio Calabria #!#Universita  Degli Studi Mediterranea Di Reggio Calabria 
 Universität der Künste Berlin #!#Universität der Künste Berlin 
 Technische Universität Dresden #!#Technische Universität Dresden 
-Universidade Federal do Rio de Janeiro - POLI #!#Universidade Federal do Rio de Janeiro - POLI 
-Universidade Federal do Rio Grande do Norte #!#Universidade Federal do Rio Grande do Norte 
-Universidad de Almeria #!#Universidad de Almeria 
+Università degli studi Verona #!#Università degli studi Verona 
+Technische Universität Kaiserslautern #!#Technische Universität Kaiserslautern 
+Universidade de Macau #!#Universidade de Macau 
 Hochschule Mainz University of Applied Sciences #!#Hochschule Mainz University of Applied Sciences 
-Escuela Superior de Diseño de Madrid #!#Escuela Superior de Diseño de Madrid 
-Universitat Politècnica de València #!#Universitat Politècnica de València 
-Universidade Federal Rural de Pernambuco #!#Universidade Federal Rural de Pernambuco 
+Erasmus University Rotterdam #!#Erasmus University Rotterdam 
 Technische Universitat München #!#Technische Universitat München 
-Ecole Supérieure d'Art d'Aix-en-Provence #!#Ecole Supérieure d'Art d'Aix-en-Provence 
-Universitat de Les Illes Baleares #!#Universitat de Les Illes Baleares 
+Uniwersytet Wroclawski #!#Uniwersytet Wroclawski 
 Hochschule Munchen University of Applied Sciences #!#Hochschule Munchen University of Applied Sciences 
-École supérieure d'art et de design TALM #!#École supérieure d'art et de design TALM 
-Universidade Federal de São Carlos #!#Universidade Federal de São Carlos 
-Fredrich-Schiller-Universität Jena #!#Fredrich-Schiller-Universität Jena 
 Universität Stuttgart #!#Universität Stuttgart 
-Beaux-Arts Nantes Saint-Nazaire #!#Beaux-Arts Nantes Saint-Nazaire 
-Hochschule für angewandte Wissenschaften #!#Hochschule für angewandte Wissenschaften 
-École Nationale Supérieure des Arts Décoratifs #!#École Nationale Supérieure des Arts Décoratifs 
-Academia di Belle Arti di Bologna #!#Academia di Belle Arti di Bologna 
-Université Paul Sabatier - Toulouse III #!#Université Paul Sabatier - Toulouse III 
-Accademia di Belle Arti Macerata #!#Accademia di Belle Arti Macerata 
-University of Ioannina #!#University of Ioannina 
-Universidad Loyola Andalucia #!#Universidad Loyola Andalucia 
-Universidade Tecnológica Federal do Paraná #!#Universidade Tecnológica Federal do Paraná 
-Sveuciliste u Zagrebu #!#Sveuciliste u Zagrebu 
-Accademia di Belle Arti de Brera, Milano #!#Accademia di Belle Arti de Brera, Milano 
-Universidad de Los Andes #!#Universidad de Los Andes 
+Universitat Politècnica de Catalunya  (Universitat Politecnica de Cataluna. Escola Tecnica Superior d' Arquitectura del Valles) #!#Universitat Politècnica de Catalunya  (Universitat Politecnica de Cataluna. Escola Tecnica Superior d' Arquitectura del Valles) 
 École Nationale Superieure d Architecture de Clermont-Ferrand #!#École Nationale Superieure d Architecture de Clermont-Ferrand 
-Accademia di Belle Arti di Napoli #!#Accademia di Belle Arti di Napoli 
-Česká zemědělská univerzita v Praze #!#Česká zemědělská univerzita v Praze 
-Università degli Studi di Modena e Reggio Emilia #!#Università degli Studi di Modena e Reggio Emilia 
 Ecole Nationale Supérieure d'Architecture de Grenoble #!#Ecole Nationale Supérieure d'Architecture de Grenoble 
-Accademia di Belle Arti di Verona #!#Accademia di Belle Arti di Verona 
-Univerzita Jana Evangelisty Purkyne V Ústí Nad Labem #!#Univerzita Jana Evangelisty Purkyne V Ústí Nad Labem 
-Universitat de Lleida #!#Universitat de Lleida 
 École Nationale Superieure D`Architecture de Lyon #!#École Nationale Superieure D`Architecture de Lyon 
-Latvijas Makslas Akademija #!#Latvijas Makslas Akademija 
 École Nationale Superieure D'Architecture de Marseille #!#École Nationale Superieure D'Architecture de Marseille 
 École Nationale Supérieure d Architecture de Nancy #!#École Nationale Supérieure d Architecture de Nancy 
-AVANS Hogeschool #!#AVANS Hogeschool 
-University of Gdańsk #!#University of Gdańsk 
-Universidad Alfonso X El Sabio #!#Universidad Alfonso X El Sabio 
 École Nationale Superieure d'Architecture de Nantes #!#École Nationale Superieure d'Architecture de Nantes 
-Hogeschool Rotterdam and Omstreken (Willem de Kooning Academy) #!#Hogeschool Rotterdam and Omstreken (Willem de Kooning Academy) 
-Ecole des Métiers de l Environnement (EME) #!#Ecole des Métiers de l Environnement (EME) 
-Gdański Uniwersytet Medyczny #!#Gdański Uniwersytet Medyczny 
-Universidad Rey Juan Carlos #!#Universidad Rey Juan Carlos 
 École d`Architecture Paris La Villette #!#École d`Architecture Paris La Villette 
-Akademia Szruk Pieknych w Gdansku #!#Akademia Szruk Pieknych w Gdansku 
-Akademia Sztuk Pieknych W Katowicach (ASP) #!#Akademia Sztuk Pieknych W Katowicach (ASP) 
-Universidad Francisco de Vitoria #!#Universidad Francisco de Vitoria 
 École d`Architecture Paris-Belleville #!#École d`Architecture Paris-Belleville 
-Akademia Sztuk Pięknych we Wrocławiu #!#Akademia Sztuk Pięknych we Wrocławiu 
-PANEPISTIMIO PATRON #!#PANEPISTIMIO PATRON 
-Universidad de Málaga #!#Universidad de Málaga 
 École Nationale Supérieure Paris Malaquais #!#École Nationale Supérieure Paris Malaquais 
-Latvijas Lauksaimniecibas Universitate #!#Latvijas Lauksaimniecibas Universitate 
-Universidad Pontificia de Salamanca #!#Universidad Pontificia de Salamanca 
 École Nationale Supérieure D`Architecture de Toulouse #!#École Nationale Supérieure D`Architecture de Toulouse 
-Velikoturnovski Universitet SV. SV. Kiril I Metodii #!#Velikoturnovski Universitet SV. SV. Kiril I Metodii 
 Ecole Nationale Supérieure d Architecture de Versailles #!#Ecole Nationale Supérieure d Architecture de Versailles 
 ETHNIKO METSOVIO POLYTECHNIO (E.M.P) #!#ETHNIKO METSOVIO POLYTECHNIO (E.M.P) 
-Akademie Vytvarnych Umeni V Praze #!#Akademie Vytvarnych Umeni V Praze 
-Instituto Politécnico Nacional #!#Instituto Politécnico Nacional 
-Academy of Fine Arts Leipzig #!#Academy of Fine Arts Leipzig 
-Universidad Tecnológica de Panamá #!#Universidad Tecnológica de Panamá 
 MOHOLY-NAGY MUVESZETI EGYETEM #!#MOHOLY-NAGY MUVESZETI EGYETEM 
-AKADEMIE DER BILDENDEN KÜNSTE MÜNCHEN #!#AKADEMIE DER BILDENDEN KÜNSTE MÜNCHEN 
-Politechnika Częstochowska #!#Politechnika Częstochowska 
-Université Evry Val-d'Essonne #!#Université Evry Val-d'Essonne 
-Politechnika Gdanska #!#Politechnika Gdanska 
-Université Côte d'Azur (UCA) #!#Université Côte d'Azur (UCA) 
 Università Degli Studi di Ferrara #!#Università Degli Studi di Ferrara 
-Politechnika Slaska #!#Politechnika Slaska 
-Université de Rouen #!#Université de Rouen 
-Ethniko Kai Kapodistriako Panepistimio Athinon #!#Ethniko Kai Kapodistriako Panepistimio Athinon 
-UNIVERSITATEA TEHNICA "GHEORGHE ASACHI" DIN IASI #!#UNIVERSITATEA TEHNICA "GHEORGHE ASACHI" DIN IASI 
-Oulun Yliopisto #!#Oulun Yliopisto 
-Università Telematica eCampus #!#Università Telematica eCampus 
-Università degli Studi di Napoli #!#Università degli Studi di Napoli 
+Università di Parma #!#Università di Parma 
 Universita Degli Studi Roma Tre #!#Universita Degli Studi Roma Tre 
-École européenne supérieure d'art de Bretagne #!#École européenne supérieure d'art de Bretagne 
-FH Campus Wien, University of Applied Sciences  (Department of Engineering, Computer Science and Digital Communications) #!#FH Campus Wien, University of Applied Sciences  (Department of Engineering, Computer Science and Digital Communications) 
-Universiteit Antwerpen #!#Universiteit Antwerpen 
-Lithuanian Sports University #!#Lithuanian Sports University 
+Georg-August-Universität Göttingen #!#Georg-August-Universität Göttingen 
 Universitá IUAV di Venezia #!#Universitá IUAV di Venezia 
-Instituto Tecnologico de Buenos Aires #!#Instituto Tecnologico de Buenos Aires 
-Universiteit Hasselt #!#Universiteit Hasselt 
-Akademia Wychowania Fizycznego Jozefa Pilsudskiego w Warszawie #!#Akademia Wychowania Fizycznego Jozefa Pilsudskiego w Warszawie 
 Universidad Nacional Autónoma de México #!#Universidad Nacional Autónoma de México 
 Universidade Eduardo Mondlane #!#Universidade Eduardo Mondlane 
-Akademia Wychowania Fizycznego we Wroclawiu #!#Akademia Wychowania Fizycznego we Wroclawiu 
 ARKITEKTUR- OG DESIGNHOGSKOLEN I OSLO #!#ARKITEKTUR- OG DESIGNHOGSKOLEN I OSLO 
-Accademia di Belle Arti Pietro Vannucci #!#Accademia di Belle Arti Pietro Vannucci 
-Université de Versailles Saint-Quentin-en-Yvelines #!#Université de Versailles Saint-Quentin-en-Yvelines 
-Universidade Federal do Rio de Janeiro - COPPE #!#Universidade Federal do Rio de Janeiro - COPPE 
-Sofiiki Universitet Sveti Kliment Ohridski #!#Sofiiki Universitet Sveti Kliment Ohridski 
-Université du Québec à Montréal - UQAM #!#Université du Québec à Montréal - UQAM 
-Universitatea din Oradea #!#Universitatea din Oradea 
-Université de Neuchâtel - UNINE #!#Université de Neuchâtel - UNINE 
+Politechnika Gdanska #!#Politechnika Gdanska 
+Politechnika Slaska #!#Politechnika Slaska 
+WAGENINGEN UNIVERSITEIT #!#WAGENINGEN UNIVERSITEIT 
 KUNGL TEKNISKA HÖGSKOLAN #!#KUNGL TEKNISKA HÖGSKOLAN 
-Pontifícia Universidade Católica de Minas Gerais #!#Pontifícia Universidade Católica de Minas Gerais 
-Fundació per a la Universitat Oberta de Catalunya #!#Fundació per a la Universitat Oberta de Catalunya 
-Vysoká Skola Vytvarnych Umení v Bratislave #!#Vysoká Skola Vytvarnych Umení v Bratislave 
-Vysoká škola ekonomická v Praze #!#Vysoká škola ekonomická v Praze 
+Aalto University #!#Aalto University 
+Univerzita Komenského v Bratislave #!#Univerzita Komenského v Bratislave 
+Oulun Yliopisto #!#Oulun Yliopisto 
+Tampereen yliopisto #!#Tampereen yliopisto 
 Özyeğin Üniversitesi #!#Özyeğin Üniversitesi 
-TalTech University #!#TalTech University 
 Universidad de la República #!#Universidad de la República 
-Universidade Federal Rural do Semiárido #!#Universidade Federal Rural do Semiárido 
+Sveuciliste Josipa Jurja Strossmayera u Osijeku (Josip Juraj Strossmayer University of Osijek) #!#Sveuciliste Josipa Jurja Strossmayera u Osijeku (Josip Juraj Strossmayer University of Osijek) 
+Università Degli Studi Della Tuscia #!#Università Degli Studi Della Tuscia 
+UiT - Norges Arktiske Universitet #!#UiT - Norges Arktiske Universitet 
+Politechnika Krakowska #!#Politechnika Krakowska 
+Uniwersytet Warszawski #!#Uniwersytet Warszawski 
+Universitat Jaume I #!#Universitat Jaume I 
+Universitat de Les Illes Baleares #!#Universitat de Les Illes Baleares 
+Université Paul Sabatier - Toulouse III #!#Université Paul Sabatier - Toulouse III 
+University of Ioannina #!#University of Ioannina 
+Sveuciliste u Zagrebu #!#Sveuciliste u Zagrebu 
+Università degli Studi di Modena e Reggio Emilia #!#Università degli Studi di Modena e Reggio Emilia 
+University of Gdańsk #!#University of Gdańsk 
+Gdański Uniwersytet Medyczny #!#Gdański Uniwersytet Medyczny 
+Latvijas Lauksaimniecibas Universitate #!#Latvijas Lauksaimniecibas Universitate 
+Uniwersytet im. Adama Mickiewicza #!#Uniwersytet im. Adama Mickiewicza 
+VYSOKÉ UCENÍ TECHNICKÉ V BRNE #!#VYSOKÉ UCENÍ TECHNICKÉ V BRNE 
+Fundació per a la Universitat Oberta de Catalunya #!#Fundació per a la Universitat Oberta de Catalunya 
+TalTech University #!#TalTech University 
 Institut polytechnique de Grenoble #!#Institut polytechnique de Grenoble 
-Rheinische Friedrich-Wilhelms-Universität Bonn #!#Rheinische Friedrich-Wilhelms-Universität Bonn 
-Universidade Federal da Grande Dourados #!#Universidade Federal da Grande Dourados 
-Hochschule für nachhaltige Entwicklung Eberswalde #!#Hochschule für nachhaltige Entwicklung Eberswalde 
+PANEPISTIMIO PATRON #!#PANEPISTIMIO PATRON 
 Klaipeda University #!#Klaipeda University 
-Frankfurt School of Finance & Management #!#Frankfurt School of Finance & Management 
-Europa-Universität Viadrina Frankfurt (Oder) #!#Europa-Universität Viadrina Frankfurt (Oder) 
-ECOLE SUPERIEURE D'ART ET DESIGN LE HAVRE ROUEN #!#ECOLE SUPERIEURE D'ART ET DESIGN LE HAVRE ROUEN 
-Universität zu Köln #!#Universität zu Köln 
-Handelshochschule Leipzig #!#Handelshochschule Leipzig 
-Leuphana Universität Lüneburg #!#Leuphana Universität Lüneburg 
-Universidade Evangélica de Goiás #!#Universidade Evangélica de Goiás 
-EBS Universität für Wirtschaft und Recht #!#EBS Universität für Wirtschaft und Recht 
-Kobenhavns Universitet #!#Kobenhavns Universitet 
-Universidade Federal do Vale de São Francisco #!#Universidade Federal do Vale de São Francisco 
-Syddansk Universitet #!#Syddansk Universitet 
-Facultad de Ciencias Fisicas e Matemáticas - Universidade Chile #!#Facultad de Ciencias Fisicas e Matemáticas - Universidade Chile 
-Beijing Institute of Technology #!#Beijing Institute of Technology 
-PHD_OUTROS FEP #!#PHD_OUTROS FEP 
-KEDGE Business School #!#KEDGE Business School 
-Institut Mines-Telecom Business School #!#Institut Mines-Telecom Business School 
-Universidad de Ciencias Aplicadas de Heilbronn #!#Universidad de Ciencias Aplicadas de Heilbronn 
-Université Grenoble Alpes #!#Université Grenoble Alpes 
-La Rochelle Business School - Excelia Group La Rochelle #!#La Rochelle Business School - Excelia Group La Rochelle 
-Georg Simon Ohm Fachochschule Nürnberg #!#Georg Simon Ohm Fachochschule Nürnberg 
+Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie #!#Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie 
 Uniwersytet Przyrodniczy we Wroclawiu #!#Uniwersytet Przyrodniczy we Wroclawiu 
-Ecole de Management de Normandie #!#Ecole de Management de Normandie 
-Université Catholique de Lille #!#Université Catholique de Lille 
-EDHEC Business School #!#EDHEC Business School 
-EMLYON Business School #!#EMLYON Business School 
+Karlsruher Institut fur Technologie #!#Karlsruher Institut fur Technologie 
 Julius-Maximilians-Universität Würzburg #!#Julius-Maximilians-Universität Würzburg 
-École Nationale des Ponts et Chaussées #!#École Nationale des Ponts et Chaussées 
-Universite de Technologie de Belfort-Montbeliard #!#Universite de Technologie de Belfort-Montbeliard 
-Neoma Business School #!#Neoma Business School 
-GROUPE ÉCOLE SUPÉRIEURE DE COMMERCE DE RENNES #!#GROUPE ÉCOLE SUPÉRIEURE DE COMMERCE DE RENNES 
-Bordeaux INP #!#Bordeaux INP 
-SKEMA Business School #!#SKEMA Business School 
-Yncréa Ouest #!#Yncréa Ouest 
-ENSICAEN École nationale supérieure d'ingénieurs de Caen #!#ENSICAEN École nationale supérieure d'ingénieurs de Caen 
-Athens University of Economics and Business #!#Athens University of Economics and Business 
-École Nationale Supérieure de l'Électronique et de ses Applications #!#École Nationale Supérieure de l'Électronique et de ses Applications 
-Budapesti Corvinus Egyetem #!#Budapesti Corvinus Egyetem 
-CentraleSupélec #!#CentraleSupélec 
-École Supérieure d'Ingénieurs en Électronique et Électrotechnique #!#École Supérieure d'Ingénieurs en Électronique et Électrotechnique 
-ECOLE NATIONALE SUPERIEURE DE TECHNIQUES AVANCEES #!#ECOLE NATIONALE SUPERIEURE DE TECHNIQUES AVANCEES 
-Association Léonard de Vinci #!#Association Léonard de Vinci 
-Sorbonne Université #!#Sorbonne Université 
-LUISS Guido Carli - Libera Universitá Internazionale Degli Studi Sociali Guido Carli #!#LUISS Guido Carli - Libera Universitá Internazionale Degli Studi Sociali Guido Carli 
 Universitatea Alexandru Ioan Cuza Iasi #!#Universitatea Alexandru Ioan Cuza Iasi 
-International Hellenic University #!#International Hellenic University 
-The Hong Kong University of Science and Technology #!#The Hong Kong University of Science and Technology 
-Università CA FOSCARI DI VENEZIA #!#Università CA FOSCARI DI VENEZIA 
-Dublin City University #!#Dublin City University 
-BUDAPESTI MUSZAKI ES GAZDASAGTUDOMANYI EGYETEM #!#BUDAPESTI MUSZAKI ES GAZDASAGTUDOMANYI EGYETEM 
-HASKOLINN I REYKJAVIK #!#HASKOLINN I REYKJAVIK 
-Waseda University #!#Waseda University 
-Çukurova Üniversitesi #!#Çukurova Üniversitesi 
-SolBridge International School of Business #!#SolBridge International School of Business 
-Politecnico di Torino #!#Politecnico di Torino 
-İzmir Yüksek Teknoloji Enstitüsü #!#İzmir Yüksek Teknoloji Enstitüsü 
-Vilnius Gedimino Technikos Universitetas #!#Vilnius Gedimino Technikos Universitetas 
-ISM Vadybos ir Ekonomikos Universitetas #!#ISM Vadybos ir Ekonomikos Universitetas 
-Indian Institute Of Technology-Roorkee #!#Indian Institute Of Technology-Roorkee 
-Université du Luxembourg #!#Université du Luxembourg 
-Indian Institute of Technology Madras #!#Indian Institute of Technology Madras 
-Rigas Ekonomikas Augstskola #!#Rigas Ekonomikas Augstskola 
-Universitetet I Sorost-Norge #!#Universitetet I Sorost-Norge 
-NHH NORGES HANDELSHØYSKOLE #!#NHH NORGES HANDELSHØYSKOLE 
-UNIVERSITETET I OSLO #!#UNIVERSITETET I OSLO 
-BI Norwegian Business School #!#BI Norwegian Business School 
-Politechnika Poznanska  (Faculty of Computing and Telecommunications) #!#Politechnika Poznanska  (Faculty of Computing and Telecommunications) 
-Universiteit van Amsterdam #!#Universiteit van Amsterdam 
-Politechnika Wroclawska #!#Politechnika Wroclawska 
-Universiteit Maastricht #!#Universiteit Maastricht 
-UNIVERSITATEA NATIONALA DE STIINTA  SI TEHNOLOGIE POLITEHNICA BUCURESTI #!#UNIVERSITATEA NATIONALA DE STIINTA  SI TEHNOLOGIE POLITEHNICA BUCURESTI 
-Universität für Bodenkultur Wien #!#Universität für Bodenkultur Wien 
-UNIVERSITATEA TEHNICA DIN CLUJ-NAPOCA #!#UNIVERSITATEA TEHNICA DIN CLUJ-NAPOCA 
-Uniwersytet ekonomiczny w Krakowie (Cracow University of Economics) #!#Uniwersytet ekonomiczny w Krakowie (Cracow University of Economics) 
-École nationale supérieure de paysage de Versailles #!#École nationale supérieure de paysage de Versailles 
-Poznan University of Economics and Business (PUEB) #!#Poznan University of Economics and Business (PUEB) 
-Slovenska technická univerzita v Bratislave #!#Slovenska technická univerzita v Bratislave 
-Szkola Glowna Handlowa W Warszawie #!#Szkola Glowna Handlowa W Warszawie 
-Zilinska univerzita v Ziline   (Faculty of Electrical Engineering and Inf. Tech.) #!#Zilinska univerzita v Ziline   (Faculty of Electrical Engineering and Inf. Tech.) 
-Van Hall Larenstein, University of Applied Sciences #!#Van Hall Larenstein, University of Applied Sciences 
-Kozminski University #!#Kozminski University 
-Haute École ICHEC-ECAM-ISFSC #!#Haute École ICHEC-ECAM-ISFSC 
-Uniwersytet Ekonomiczny we Wroclawiu #!#Uniwersytet Ekonomiczny we Wroclawiu 
-Universitatea de Vest din Timisoara #!#Universitatea de Vest din Timisoara 
-University of Belgrade #!#University of Belgrade 
-Göteborgs Universitet #!#Göteborgs Universitet 
-Jönköping University Foundation #!#Jönköping University Foundation 
-HANKEN SVENSKA HANDELSHÖGSKOLAN #!#HANKEN SVENSKA HANDELSHÖGSKOLAN 
-Universitat Internacional de Catalunya #!#Universitat Internacional de Catalunya 
-Agricultural University of Athens #!#Agricultural University of Athens 
-Bilkent Üniversitesi #!#Bilkent Üniversitesi 
-Koç Üniversitesi #!#Koç Üniversitesi 
-Sabancı Üniversitesi #!#Sabancı Üniversitesi 
-National Taiwan University #!#National Taiwan University 
-Rijksuniversiteit Groningen #!#Rijksuniversiteit Groningen 
-University of Bradford #!#University of Bradford 
-Middlesex University #!#Middlesex University 
-Télécom Paris #!#Télécom Paris 
-Universidad ORT Uruguay #!#Universidad ORT Uruguay 
-Technische Universität Wien #!#Technische Universität Wien 
-Technische Universiteit Delft #!#Technische Universiteit Delft 
-University of Nicosia - ARC #!#University of Nicosia - ARC 
-Bauhaus-Universität Weimar #!#Bauhaus-Universität Weimar 
-Aalborg Universitet #!#Aalborg Universitet 
-Université de Technologie de Compiègne #!#Université de Technologie de Compiègne 
-École Supérieure d'Ingénieurs des Travaux de la Construction de Caen #!#École Supérieure d'Ingénieurs des Travaux de la Construction de Caen 
-Ecole Spéciale des Travaux Publics, du Bâtiment et de l'Industrie (ESTP Paris) #!#Ecole Spéciale des Travaux Publics, du Bâtiment et de l'Industrie (ESTP Paris) 
-Universidad San Jorge #!#Universidad San Jorge 
-CESI - Centre des Études Supérieures Industrielles #!#CESI - Centre des Études Supérieures Industrielles 
-Institut National des Sciences Appliquées de Rennes - INSA #!#Institut National des Sciences Appliquées de Rennes - INSA 
-Università degli Studi del Molise #!#Università degli Studi del Molise 
-Università degli Studi della Basilicata #!#Università degli Studi della Basilicata 
-Hogskulen Pa Vestlandet #!#Hogskulen Pa Vestlandet 
-NORGES TEKNISK-NATURVITENSKAPELIGE UNIVERSITET #!#NORGES TEKNISK-NATURVITENSKAPELIGE UNIVERSITET 
-Politechnika Bialostocka #!#Politechnika Bialostocka 
-UNIVERSITATEA TEHNICA DE CONSTRUCTII DIN BUCURESTI #!#UNIVERSITATEA TEHNICA DE CONSTRUCTII DIN BUCURESTI 
-Universitatea Politehnica din Timisoara #!#Universitatea Politehnica din Timisoara 
-Seinäjoen Ammattikorkeakoulu #!#Seinäjoen Ammattikorkeakoulu 
-Boğaziçi Üniversitesi   (Institute of Earthquake Engineering) #!#Boğaziçi Üniversitesi   (Institute of Earthquake Engineering) 
-Université de Mons #!#Université de Mons 
-Faculdade CESAR #!#Faculdade CESAR 
-Tsinghua University #!#Tsinghua University 
-Brandenburgische Technische Universität (BTU) Cottbus #!#Brandenburgische Technische Universität (BTU) Cottbus 
-Universidad de Jaén #!#Universidad de Jaén 
-Tallinn University #!#Tallinn University 
-Ecole Centrale d'Electronique #!#Ecole Centrale d'Electronique 
-École Nationale Sup. des Mines de Saint Etienne #!#École Nationale Sup. des Mines de Saint Etienne 
-Institut National des Sciences Appliquées de Toulouse #!#Institut National des Sciences Appliquées de Toulouse 
-Panepistimio Dytikis Makedonias #!#Panepistimio Dytikis Makedonias 
-Universiteit Leiden #!#Universiteit Leiden 
-Uniwersytet Lódzki #!#Uniwersytet Lódzki 
-Chimie ParisTech - Université PSL #!#Chimie ParisTech - Université PSL 
-Katholische Universität Eichstätt  (Faculty of Business and Economics) #!#Katholische Universität Eichstätt  (Faculty of Business and Economics) 
-Kühne Logistics University #!#Kühne Logistics University 
-Duale Hochschule Baden-Württemberg Karlsruhe #!#Duale Hochschule Baden-Württemberg Karlsruhe 
-Otto-Von-Guericke-Universität Magdeburg #!#Otto-Von-Guericke-Universität Magdeburg 
-Universidad Publica de Navarra #!#Universidad Publica de Navarra 
-École Nationale Supérieure d´Arts et Métiers #!#École Nationale Supérieure d´Arts et Métiers 
-Politecnico di Bari #!#Politecnico di Bari 
-Università degli Studi di Bergamo #!#Università degli Studi di Bergamo 
-Technische Universiteit Eindhoven #!#Technische Universiteit Eindhoven 
-Högskolan i Boras #!#Högskolan i Boras 
-Lappeenrannan Teknillinen Yliopisto #!#Lappeenrannan Teknillinen Yliopisto 
-Vîsoká Skola Chemicko-Technologicka v Praze #!#Vîsoká Skola Chemicko-Technologicka v Praze 
-Université de Lorraine #!#Université de Lorraine 
-Technische Universität Darmstadt #!#Technische Universität Darmstadt 
-Technische Universität Dortmund #!#Technische Universität Dortmund 
-Hochschule Esslingen University of Applied Sciences #!#Hochschule Esslingen University of Applied Sciences 
-Helmut Schmidt Universität - Universität der Bundeswehr Hamburg #!#Helmut Schmidt Universität - Universität der Bundeswehr Hamburg 
-Universidad Politécnica de Cartagena #!#Universidad Politécnica de Cartagena 
-Institut Supérieur de l'Aéronautique et de l'Espace #!#Institut Supérieur de l'Aéronautique et de l'Espace 
-Leopold-Franzens-Universitat Innsbruck #!#Leopold-Franzens-Universitat Innsbruck 
-Concordia University of Edmonton #!#Concordia University of Edmonton 
-HEC Montréal #!#HEC Montréal 
-Kauno Technologijos Universitetas #!#Kauno Technologijos Universitetas 
-Zhejiang University #!#Zhejiang University 
-Berlin School of Economics and Law #!#Berlin School of Economics and Law 
-FH Münster University of Applied Sciences  - Münster School of Business #!#FH Münster University of Applied Sciences  - Münster School of Business 
-Linnaeus University #!#Linnaeus University 
-Erciyes Üniversitesi  (Department of Mechanical Engineering ) #!#Erciyes Üniversitesi  (Department of Mechanical Engineering ) 
-IE University #!#IE University 
-Instituto Tecnológico y de Estudios Superiores de Monterrey #!#Instituto Tecnológico y de Estudios Superiores de Monterrey 
-Uniwersytet Ekonomiczny w Katowicach #!#Uniwersytet Ekonomiczny w Katowicach 
-Academia de Studii Economice - Bucuresti #!#Academia de Studii Economice - Bucuresti 
-University of Bristol #!#University of Bristol 
-University of Exeter #!#University of Exeter 
-Beijing Normal University #!#Beijing Normal University 
-Universidad Carlos III de Madrid #!#Universidad Carlos III de Madrid 
-Queen Mary University London #!#Queen Mary University London 
-Universidade Estadual de Santa Cruz #!#Universidade Estadual de Santa Cruz 
-Fundação Getúlio Vargas #!#Fundação Getúlio Vargas 

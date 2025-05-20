@@ -27,6 +27,7 @@ CREATE TABLE course (
   year INT NOT NULL,
   url VARCHAR(2000) NOT NULL,
   plan_url VARCHAR(2000) NOT NULL,
+  stats_json VARCHAR(10000),
   last_updated TIMESTAMP NOT NULL,
   FOREIGN KEY (faculty_id) REFERENCES faculty(acronym) ON DELETE CASCADE ON UPDATE CASCADE
 );
