@@ -19,7 +19,7 @@ class CoursePathSpider(scrapy.Spider):
         sql = """
             SELECT course.id, year, faculty.acronym
             FROM course JOIN faculty                                
-            ON course.faculty_id = faculty.acronym
+            ON course.faculty_id = faculty.id
         """
         
         self.db.cursor.execute(sql)

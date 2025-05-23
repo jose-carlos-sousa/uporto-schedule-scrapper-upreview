@@ -23,7 +23,7 @@ CREATE TABLE `faculty` (
 
 CREATE TABLE `course` (
   `id` INTEGER PRIMARY KEY,
-  `faculty_id` varchar(10) NOT NULL,
+  `faculty_id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   `acronym` varchar(10) NOT NULL,
   `course_type` varchar(50) NOT NULL,

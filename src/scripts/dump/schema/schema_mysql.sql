@@ -8,6 +8,7 @@
 --
 
 CREATE TABLE faculty (
+  id SERIAL PRIMARY KEY,
   acronym VARCHAR(10) PRIMARY KEY,
   name TEXT,
   last_updated TIMESTAMP NOT NULL
@@ -20,7 +21,7 @@ CREATE TABLE faculty (
 
 CREATE TABLE course (
   id SERIAL PRIMARY KEY,
-  faculty_id VARCHAR(10) NOT NULL,
+  faculty_id INT NOT NULL,
   name VARCHAR(200) NOT NULL,
   acronym VARCHAR(10) NOT NULL,
   course_type VARCHAR(50) NOT NULL,
@@ -29,7 +30,7 @@ CREATE TABLE course (
   plan_url VARCHAR(2000) NOT NULL,
   stats_json VARCHAR(10000),
   last_updated TIMESTAMP NOT NULL,
-  FOREIGN KEY (faculty_id) REFERENCES faculty(acronym) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (faculty_id) REFERENCES faculty(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE INDEX course_faculty_id_idx ON course (faculty_id);
