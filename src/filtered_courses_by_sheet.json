@@ -1,0 +1,132 @@
+{
+  "Nota Técnica": [],
+  "Formas Ingresso": [],
+  "Percentil Entrada": [],
+  "Situacao Apos 1 Ano": [
+    {
+      "Estabelecimento": "Universidade do Porto",
+      "CodigoEstabelecimento": 1100.0,
+      "UnidadeOrganica": "Faculdade de Ciências",
+      "CodigoUnidadeOrganica": 1103.0,
+      "Natureza": "Publico",
+      "TipoEnsino": "Universitario",
+      "NomeCurso": "Aplicações em Biotecnologia e Biologia Sintética",
+      "CodigoCurso": "MA44",
+      "Grau": "Mestrado 2.º ciclo",
+      "NumeroInscritosPrimeiroAnoPrimeiraVez2Anos": 33.0,
+      "PercentagemDiplomadosCurso": 0.0,
+      "PercentagemInscritosMesmoEstabelecimentoCurso": 90.9,
+      "PercentagemOutroCursoMesmoEstabelecimento": 0.0,
+      "PercentagemNoutroEstabelecimento": 0.0,
+      "PercentagemNaoEncontradosEnsinoSuperior": 9.1,
+      "AnosInscritosPrimeiroAnoPrimeiraVez": "2022/23_2021/22"
+    }
+  ],
+  "Classificacoes Finais": [
+    {
+      "Estabelecimento": "Universidade do Porto",
+      "CodigoEstabelecimento": 1100.0,
+      "UnidadeOrganica": "Faculdade de Ciências",
+      "CodigoUnidadeOrganica": 1103.0,
+      "Natureza": "Publico",
+      "TipoEnsino": "Universitario",
+      "NomeCurso": "Aplicações em Biotecnologia e Biologia Sintética",
+      "CodigoCurso": "MA44",
+      "Grau": "Mestrado 2.º ciclo",
+      "NumeroDiplomados2AnosRaides": 35.0,
+      "NotaFinalMedia": 17.0,
+      "PercentagemNota10": 0.0,
+      "PercentagemNota11": 0.0,
+      "PercentagemNota12": 0.0,
+      "PercentagemNota13": 2.9,
+      "PercentagemNota14": 2.9,
+      "PercentagemNota15": 8.6,
+      "PercentagemNota16": 8.6,
+      "PercentagemNota17": 37.1,
+      "PercentagemNota18": 34.3,
+      "PercentagemNota19": 5.7,
+      "PercentagemNota20": 0.0,
+      "AnosObtencaoDiploma": "2021/22_2020/21"
+    }
+  ],
+  "Inscritos por Sexo": [
+    {
+      "Estabelecimento": "Universidade do Porto",
+      "CodigoEstabelecimento": 1100.0,
+      "UnidadeOrganica": "Faculdade de Ciências",
+      "CodigoUnidadeOrganica": 1103.0,
+      "Natureza": "Publico",
+      "TipoEnsino": "Universitario",
+      "NomeCurso": "Aplicações em Biotecnologia e Biologia Sintética",
+      "CodigoCurso": "MA44",
+      "Grau": "Mestrado 2.º ciclo",
+      "NumeroInscritos": 31.0,
+      "NumeroHomens": 17.0,
+      "NumeroMulheres": 14.0,
+      "AnoLetivo": "2022/23"
+    }
+  ],
+  "Inscritos por Nacionalidade": [
+    {
+      "Estabelecimento": "Universidade do Porto",
+      "CodigoEstabelecimento": 1100.0,
+      "UnidadeOrganica": "Faculdade de Ciências",
+      "CodigoUnidadeOrganica": 1103.0,
+      "Natureza": "Publico",
+      "TipoEnsino": "Universitario",
+      "NomeCurso": "Aplicações em Biotecnologia e Biologia Sintética",
+      "CodigoCurso": "MA44",
+      "Grau": "Mestrado 2.º ciclo",
+      "NumeroInscritos": 31.0,
+      "NumeroPortugueses": 30.0,
+      "NumeroEstrangeiros": 1.0,
+      "AnoLetivo": "2022/23"
+    }
+  ],
+  "Inscritos por Idade": [
+    {
+      "Estabelecimento": "Universidade do Porto",
+      "CodigoEstabelecimento": 1100.0,
+      "UnidadeOrganica": "Faculdade de Ciências",
+      "CodigoUnidadeOrganica": 1103.0,
+      "Natureza": "Publico",
+      "TipoEnsino": "Universitario",
+      "NomeCurso": "Aplicações em Biotecnologia e Biologia Sintética",
+      "CodigoCurso": "MA44",
+      "Grau": "Mestrado 2.º ciclo",
+      "NumeroTotalInscritos": 31.0,
+      "Numero1_18Anos": 0.0,
+      "Numero19Anos": 0.0,
+      "Numero20Anos": 0.0,
+      "Numero21Anos": 7.0,
+      "Numero22Anos": 11.0,
+      "Numero23Anos": 5.0,
+      "Numero24Anos": 4.0,
+      "Numero25_27Anos": 2.0,
+      "Numero28_30Anos": 0.0,
+      "Numero31_39Anos": 1.0,
+      "Numero40_99Anos": 1.0,
+      "AnoLetivo": "2022/23"
+    }
+  ],
+  "Desemprego Registado": [],
+  "Numero Inscritos": [
+    {
+      "Estabelecimento": "Universidade do Porto",
+      "CodigoEstabelecimento": 1100.0,
+      "UnidadeOrganica": "Faculdade de Ciências",
+      "CodigoUnidadeOrganica": 1103.0,
+      "Natureza": "Publico",
+      "TipoEnsino": "Universitario",
+      "NomeCurso": "Aplicações em Biotecnologia e Biologia Sintética",
+      "CodigoCurso": "MA44",
+      "Grau": "Mestrado 2.º ciclo",
+      "Total": 121.0,
+      "2018/2019": 0.0,
+      "2019/2020": 19.0,
+      "2020/2021": 38.0,
+      "2021/2022": 33.0,
+      "2022/2023": 31.0
+    }
+  ]
+}

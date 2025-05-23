@@ -9,10 +9,12 @@
 --
 
 CREATE TABLE `faculty` (
-  `acronym` varchar(10) PRIMARY KEY ,
+  `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+  `acronym` varchar(10) UNIQUE,
   `name` text,
   `last_updated` datetime NOT NULL
 );
+
 
 -- --------------------------------------------------------
 --
@@ -28,6 +30,7 @@ CREATE TABLE `course` (
   `year` int(11) NOT NULL,
   `url` varchar(2000) NOT NULL,
   `plan_url` varchar(2000) NOT NULL,
+  `stats_json` TEXT,
   `last_updated` datetime NOT NULL,
   FOREIGN KEY (`faculty_id`) REFERENCES `faculty`(`acronym`) ON DELETE CASCADE ON UPDATE CASCADE
 );
