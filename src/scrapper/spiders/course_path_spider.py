@@ -26,7 +26,7 @@ class CoursePathSpider(scrapy.Spider):
         self.courses = self.db.cursor.fetchall()   
 
 
-    async def start(self): #For every course make request to the course page
+    def start_requests(self): #For every course make request to the course page
         print("Starting requests...")
         for course in self.courses:         
             course_id, year, faculty_acronym = course

@@ -1,0 +1,116 @@
+scrapy crawl course_unit_groups
+Initializing CourseUnitSpider...
+Starting requests...
+Processing row: <tr><td><table class="dadossz" width="100%"><tr><th nowrap>Código</th><th nowrap>Sigla</th><th nowrap colspan="2">Nome</th><th nowrap>Créditos</th><th nowrap>Ano</th><th nowrap>Período</th></tr><tr class=" i "><td class="k">AADL01</td><td class="l">AADL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547865">Competências transversais: aquisição automatizada de dados laboratoriais</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">MTIL01</td><td class="l">MTIL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548053">Competências Transversais: Montagem e Teste de Instalações Laboratoriais</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">CTEIL01</td><td class="l">CTEIL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548059">Competências Transversais para a Engenharia: Introdução ao Linux 	</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">CSR01</td><td class="l">CSR</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548009">Competições de Swarm Robotics</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">EAV1</td><td class="l">EAV</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_list?pv_ucurr_id=284904&amp;pv_ano_lectivo=2024&amp;pv_periodo_id=2">Empregabilidade ao Longo da Vida</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">IADE01</td><td class="l">IADE</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547165">Introdução à análise de dados em Excel</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">IADP01</td><td class="l">IADP</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547185">Introdução à análise de dados em Python</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">IMQ01</td><td class="l">IMQ</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=551425">Introdução à Mecânica Quântica</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">IR01</td><td class="l">IR</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548007">Introdução à Robótica</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">MPSAC01</td><td class="l">MPSAC</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548025">Mini-projetos de sistemas de aprendizagem e controlo</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">DDS01</td><td class="l">DDS</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548047">Os Desafios do Desenvolvimento Sustentável</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">RNMOG</td><td class="l">RNMOG01</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548056">Radiação natural em materiais de origem geológica</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">SAFE01</td><td class="l">SAFE</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548057">SAFE - Segurança química e microbiológica em laboratórios de investigação</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr></table></td></tr>
+Processing row: <tr><th nowrap>Código</th><th nowrap>Sigla</th><th nowrap colspan="2">Nome</th><th nowrap>Créditos</th><th nowrap>Ano</th><th nowrap>Período</th></tr>
+2025-06-13 08:19:43 [course_unit_groups] WARNING: No link found for course unit in group: Competências Transversais I 2ºA - 1ºS
+Processing row: <tr class=" i "><td class="k">AADL01</td><td class="l">AADL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547865">Competências transversais: aquisição automatizada de dados laboratoriais</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" p "><td class="k">MTIL01</td><td class="l">MTIL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548053">Competências Transversais: Montagem e Teste de Instalações Laboratoriais</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">CTEIL01</td><td class="l">CTEIL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548059">Competências Transversais para a Engenharia: Introdução ao Linux 	</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" p "><td class="k">CSR01</td><td class="l">CSR</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548009">Competições de Swarm Robotics</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">EAV1</td><td class="l">EAV</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_list?pv_ucurr_id=284904&amp;pv_ano_lectivo=2024&amp;pv_periodo_id=2">Empregabilidade ao Longo da Vida</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Failed to extract course unit ID from link: ucurr_geral.ficha_uc_list?pv_ucurr_id=284904&pv_ano_lectivo=2024&pv_periodo_id=2
+Parsed query params: {'pv_ucurr_id': ['284904'], 'pv_ano_lectivo': ['2024'], 'pv_periodo_id': ['2']}
+Extracted course unit ID: 284904 from link: ucurr_geral.ficha_uc_list?pv_ucurr_id=284904&pv_ano_lectivo=2024&pv_periodo_id=2
+Using course unit ID: 284904 from link: ucurr_geral.ficha_uc_list?pv_ucurr_id=284904&pv_ano_lectivo=2024&pv_periodo_id=2
+recent_occr:  550288
+Processing row: <tr class=" p "><td class="k">IADE01</td><td class="l">IADE</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547165">Introdução à análise de dados em Excel</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">IADP01</td><td class="l">IADP</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547185">Introdução à análise de dados em Python</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" p "><td class="k">IMQ01</td><td class="l">IMQ</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=551425">Introdução à Mecânica Quântica</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">IR01</td><td class="l">IR</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548007">Introdução à Robótica</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" p "><td class="k">MPSAC01</td><td class="l">MPSAC</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548025">Mini-projetos de sistemas de aprendizagem e controlo</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">DDS01</td><td class="l">DDS</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548047">Os Desafios do Desenvolvimento Sustentável</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" p "><td class="k">RNMOG</td><td class="l">RNMOG01</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548056">Radiação natural em materiais de origem geológica</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">SAFE01</td><td class="l">SAFE</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548057">SAFE - Segurança química e microbiológica em laboratórios de investigação</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">1S</td></tr>
+Processing row: <tr><td>Obter aprovação a:<br><ul style="margin-top: 0pt; margin-bottom: 0pt;"><li>mínimo de 1,5 créditos e máximo de 1,5 créditos</li></ul></td></tr>
+2025-06-13 08:19:43 [course_unit_groups] WARNING: No link found for course unit in group: Competências Transversais I 2ºA - 1ºS
+Processing row: <tr><td><table class="dadossz" width="100%"><tr><th nowrap>Código</th><th nowrap>Sigla</th><th nowrap colspan="2">Nome</th><th nowrap>Créditos</th><th nowrap>Ano</th><th nowrap>Período</th></tr><tr class=" i "><td class="k">CP01</td><td class="l">CP</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548052">Competências Transversais: Comunicação Profissional</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">2S</td></tr></table></td></tr>
+Processing row: <tr><th nowrap>Código</th><th nowrap>Sigla</th><th nowrap colspan="2">Nome</th><th nowrap>Créditos</th><th nowrap>Ano</th><th nowrap>Período</th></tr>
+2025-06-13 08:19:43 [course_unit_groups] WARNING: No link found for course unit in group: Competências Transversais II 2ºA - 2ºS
+Processing row: <tr class=" i "><td class="k">CP01</td><td class="l">CP</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548052">Competências Transversais: Comunicação Profissional</a></td><td class="n">1,5</td><td class="l">2º</td><td class="l">2S</td></tr>
+Processing row: <tr><td>Obter aprovação a:<br><ul style="margin-top: 0pt; margin-bottom: 0pt;"><li>mínimo de 1,5 créditos e máximo de 1,5 créditos</li></ul></td></tr>
+2025-06-13 08:19:43 [course_unit_groups] WARNING: No link found for course unit in group: Competências Transversais II 2ºA - 2ºS
+Processing row: <tr><td><table class="dadossz" width="100%"><tr><th nowrap>Código</th><th nowrap>Sigla</th><th nowrap colspan="2">Nome</th><th nowrap>Créditos</th><th nowrap>Ano</th><th nowrap>Período</th></tr><tr class=" i "><td class="k">AADL01</td><td class="l">AADL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547865">Competências transversais: aquisição automatizada de dados laboratoriais</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">MTIL01</td><td class="l">MTIL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548053">Competências Transversais: Montagem e Teste de Instalações Laboratoriais</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">CTEIL01</td><td class="l">CTEIL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548059">Competências Transversais para a Engenharia: Introdução ao Linux 	</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">CSR01</td><td class="l">CSR</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548009">Competições de Swarm Robotics</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">EAV1</td><td class="l">EAV</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_list?pv_ucurr_id=284904&amp;pv_ano_lectivo=2024&amp;pv_periodo_id=2">Empregabilidade ao Longo da Vida</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">IADE01</td><td class="l">IADE</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547165">Introdução à análise de dados em Excel</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">IADP01</td><td class="l">IADP</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547185">Introdução à análise de dados em Python</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">IMQ01</td><td class="l">IMQ</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=551425">Introdução à Mecânica Quântica</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">IR01</td><td class="l">IR</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548007">Introdução à Robótica</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">MPSAC01</td><td class="l">MPSAC</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548025">Mini-projetos de sistemas de aprendizagem e controlo</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">DDS01</td><td class="l">DDS</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548047">Os Desafios do Desenvolvimento Sustentável</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" p "><td class="k">RNMOG</td><td class="l">RNMOG01</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548056">Radiação natural em materiais de origem geológica</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr><tr class=" i "><td class="k">SAFE01</td><td class="l">SAFE</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548057">SAFE - Segurança química e microbiológica em laboratórios de investigação</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr></table></td></tr>
+Processing row: <tr><th nowrap>Código</th><th nowrap>Sigla</th><th nowrap colspan="2">Nome</th><th nowrap>Créditos</th><th nowrap>Ano</th><th nowrap>Período</th></tr>
+2025-06-13 08:19:43 [course_unit_groups] WARNING: No link found for course unit in group: Competências Transversais III 3ºA - 1ºS
+Processing row: <tr class=" i "><td class="k">AADL01</td><td class="l">AADL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547865">Competências transversais: aquisição automatizada de dados laboratoriais</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" p "><td class="k">MTIL01</td><td class="l">MTIL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548053">Competências Transversais: Montagem e Teste de Instalações Laboratoriais</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">CTEIL01</td><td class="l">CTEIL</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548059">Competências Transversais para a Engenharia: Introdução ao Linux 	</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" p "><td class="k">CSR01</td><td class="l">CSR</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548009">Competições de Swarm Robotics</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">EAV1</td><td class="l">EAV</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_list?pv_ucurr_id=284904&amp;pv_ano_lectivo=2024&amp;pv_periodo_id=2">Empregabilidade ao Longo da Vida</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Failed to extract course unit ID from link: ucurr_geral.ficha_uc_list?pv_ucurr_id=284904&pv_ano_lectivo=2024&pv_periodo_id=2
+Parsed query params: {'pv_ucurr_id': ['284904'], 'pv_ano_lectivo': ['2024'], 'pv_periodo_id': ['2']}
+Extracted course unit ID: 284904 from link: ucurr_geral.ficha_uc_list?pv_ucurr_id=284904&pv_ano_lectivo=2024&pv_periodo_id=2
+Using course unit ID: 284904 from link: ucurr_geral.ficha_uc_list?pv_ucurr_id=284904&pv_ano_lectivo=2024&pv_periodo_id=2
+recent_occr:  550288
+Processing row: <tr class=" p "><td class="k">IADE01</td><td class="l">IADE</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547165">Introdução à análise de dados em Excel</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">IADP01</td><td class="l">IADP</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=547185">Introdução à análise de dados em Python</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" p "><td class="k">IMQ01</td><td class="l">IMQ</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=551425">Introdução à Mecânica Quântica</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">IR01</td><td class="l">IR</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548007">Introdução à Robótica</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" p "><td class="k">MPSAC01</td><td class="l">MPSAC</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548025">Mini-projetos de sistemas de aprendizagem e controlo</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">DDS01</td><td class="l">DDS</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548047">Os Desafios do Desenvolvimento Sustentável</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" p "><td class="k">RNMOG</td><td class="l">RNMOG01</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548056">Radiação natural em materiais de origem geológica</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr class=" i "><td class="k">SAFE01</td><td class="l">SAFE</td><td class="t" colspan="2"><a href="ucurr_geral.ficha_uc_view?pv_ocorrencia_id=548057">SAFE - Segurança química e microbiológica em laboratórios de investigação</a></td><td class="n">1,5</td><td class="l">3º</td><td class="l">1S</td></tr>
+Processing row: <tr><td>Obter aprovação a:<br><ul style="margin-top: 0pt; margin-bottom: 0pt;"><li>mínimo de 1,5 créditos e máximo de 1,5 créditos</li></ul></td></tr>
+2025-06-13 08:19:43 [course_unit_groups] WARNING: No link found for course unit in group: Competências Transversais III 3ºA - 1ºS
+  0% 0/10000 [00:00<?, ?it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 2/10000 [00:00<39:38,  4.20it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 3/10000 [00:00<49:03,  3.40it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 4/10000 [00:01<54:34,  3.05it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 6/10000 [00:01<33:38,  4.95it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 7/10000 [00:01<29:36,  5.62it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 8/10000 [00:01<27:26,  6.07it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 12/10000 [00:01<14:00, 11.88it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 19/10000 [00:01<07:32, 22.06it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 23/10000 [00:02<06:27, 25.76it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 27/10000 [00:02<15:11, 10.94it/s][ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+[ERR] - INSERT COURSE_UNIT_GROUP :: UNIQUE constraint failed: course_unit_group.id
+ERROR in insert course_course_unit_group
+  0% 30/10000 [00:03<16:38,  9.99it/s]

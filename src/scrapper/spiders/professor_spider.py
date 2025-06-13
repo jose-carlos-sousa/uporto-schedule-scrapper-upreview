@@ -11,7 +11,7 @@ class ProfessorSpider(scrapy.Spider):
     inserted_teacher_ids = set()
     cu_professors = set()
 
-    async def start(self):
+    def start_requests(self):
         db = Database()
         sql = """
             SELECT cu.id, cu.recent_occr, f.acronym

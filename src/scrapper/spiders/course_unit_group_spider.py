@@ -30,12 +30,12 @@ class CourseUnitGroupSpider(scrapy.Spider):
         self.courses = self.db.cursor.fetchall()           
 
 
-    async def start(self): #For every course make request to the course page
+    def start_requests(self): #For every course make request to the course page
         print("Starting requests...")
         for course in self.courses:         
-            course_id, year, faculty_acronym = course
-            url = f'https://sigarra.up.pt/{faculty_acronym}/pt/cur_geral.cur_view?pv_ano_lectivo={year}&pv_origem=CUR&pv_tipo_cur_sigla=M&pv_curso_id={course_id}'
-            yield scrapy.Request(url=url, callback=self.parse_course_page, meta={'course_id': course_id, 'year': year, 'faculty_acronym': faculty_acronym})
+                course_id, year, faculty_acronym = course
+                url = f'https://sigarra.up.pt/{faculty_acronym}/pt/cur_geral.cur_view?pv_ano_lectivo={year}&pv_origem=CUR&pv_tipo_cur_sigla=M&pv_curso_id={course_id}'
+                yield scrapy.Request(url=url, callback=self.parse_course_page, meta={'course_id': course_id, 'year': year, 'faculty_acronym': faculty_acronym})
 
     def parse_course_page(self, response): #Scrape the course page , get the plan link and make request to the plan page
         plan_link = response.xpath('//h3[text()="Planos de Estudos"]/following-sibling::div//ul/li/a/@href').extract_first()
@@ -67,6 +67,7 @@ class CourseUnitGroupSpider(scrapy.Spider):
                     continue
                 for row in course_rows:
                     link = row.xpath('.//td[@class="t"]/a/@href').extract_first()
+                    print(f"Processing row: {row.get()}")
                     if link:
                         year = row.xpath('.//td[5]/text()').get().split("º")[0].strip()
                         if not year:
@@ -87,7 +88,41 @@ class CourseUnitGroupSpider(scrapy.Spider):
                                 }
                             )
                         except IndexError:
-                            self.logger.warning(f"Failed to parse course unit ID from link {link}")
+                            # Try to extract course unit id from other link patterns
+                            print(f"Failed to extract course unit ID from link: {link}")
+                            try:
+                                parsed_url = urlparse(link)
+                                query_params = parse_qs(parsed_url.query)
+                                print(f"Parsed query params: {query_params}")
+                                if 'pv_ucurr_id' in query_params:
+                               
+                                    course_unit_id = query_params['pv_ucurr_id'][0]
+                                    print(f"Extracted course unit ID: {course_unit_id} from link: {link}")
+                                    sql= """
+                                        SELECT recent_occr FROM course_unit
+                                        where id = ?
+                                    """
+                                    self.db.cursor.execute(sql, (course_unit_id,))
+                                    print(f"Using course unit ID: {course_unit_id} from link: {link}")
+                                    course_unit_id = self.db.cursor.fetchone()[0]
+                                    print("recent_occr: ", course_unit_id)
+                                    course_unit_url = f'https://sigarra.up.pt/feup/pt/ucurr_geral.ficha_uc_view?pv_ocorrencia_id={course_unit_id}'
+                                    yield scrapy.Request(
+                                        url=course_unit_url,
+                                        callback=self.parse_course_unit_page,
+                                        meta={
+                                            'course_id': course_id,
+                                            'group_name': group_name,
+                                            'course_unit_id': course_unit_id,
+                                            'div_id': div_id,
+                                            'year': year
+                                        }
+                                    )
+                                else:
+                                    self.logger.warning(f"Could not find pv_ucurr_id in link: {link}")
+                            except:
+                                self.logger.warning(f"Failed to parse course unit ID from link {link}")
+                           
                     else:
                         self.logger.warning(f"No link found for course unit in group: {group_name}")
         pattern = re.compile(r'^div_\d+_id_')
@@ -130,7 +165,37 @@ class CourseUnitGroupSpider(scrapy.Spider):
                                     }
                                 )
                             except IndexError:
-                                self.logger.warning(f"Failed to parse course unit ID from link {link}")
+                                try:
+                                    parsed_url = urlparse(link)
+                                    print(f"Parsed URL: {parsed_url}")
+                                    query_params = parse_qs(parsed_url.query)
+                                    if 'pv_ucurr_id' in query_params:
+                                        course_unit_id = query_params['pv_ucurr_id'][0]
+                                        print(f"Extracted course unit ID: {course_unit_id} from link: {link}")
+                                        sql= """
+                                            SELECT recent_occr FROM course_unit
+                                            where id = ?
+                                        """
+                                        self.db.cursor.execute(sql, (course_unit_id,))
+                                        course_unit_id = self.db.cursor.fetchone()[0]
+                                        
+                                        print(f"Using course unit ID: {course_unit_id}")
+                                        course_unit_url = f'https://sigarra.up.pt/feup/pt/ucurr_geral.ficha_uc_view?pv_ocorrencia_id={course_unit_id}'
+                                        yield scrapy.Request(
+                                            url=course_unit_url,
+                                            callback=self.parse_course_unit_page,
+                                            meta={
+                                                'course_id': course_id,
+                                                'group_name': group_name,
+                                                'course_unit_id': course_unit_id,
+                                                'div_id': div_id,
+                                                'year': year
+                                            }
+                                        )
+                                    else:
+                                        self.logger.warning(f"Could not find pv_ucurr_id in link: {link}")
+                                except:
+                                    self.logger.warning(f"Failed to parse course unit ID from link {link}")
                         else:
                             self.logger.warning(f"No link found for course unit in group: {group_name}")
 

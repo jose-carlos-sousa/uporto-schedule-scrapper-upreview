@@ -47,7 +47,7 @@ class CourseUnitSpider(scrapy.Spider):
             'pv_password': self.password
         }))
 
-    async def start(self):
+    def start_requests(self):
         "This function is called before crawling starts."
         if self.password is None:
             self.password = getpass.getpass(prompt='Password: ', stream=None)
